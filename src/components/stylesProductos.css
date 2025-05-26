@@ -1,0 +1,96 @@
+.headline {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+ /* .all-products {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 48px;
+}  */
+
+.product {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  overflow: hidden;
+  color: #39f2ae;
+  border-radius: 10px 32px;
+  border: 2px solid #39f2ae;
+  }
+
+/*corazoncito de favorito*/
+/* .fav-container {
+  position: relative;
+}
+
+.fav-container .fa-heart {
+  position: absolute;
+  top: -10px;
+  left: -120px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+
+.fa-heart:hover {
+  scale: 1.2;
+} */
+
+.product-title {
+  font-size: 1.2rem;
+  padding-bottom: 16px;
+}
+
+.product-off {
+  font-style: oblique;
+  color: #ffffff;
+  background-color: #39f2ae62;
+  box-shadow: 1px 1px 5px #39f2ae;
+  padding: 3px;
+}
+
+.product-shipping {
+  font-style: oblique;
+  color: #b1b5c0;
+  padding-top: 16px;
+}
+
+.product img {
+  width: 180px;
+  margin: 10px;
+  /*transition: ease 0.3s;*/
+}
+
+ /* .product:hover img {
+  scale: 1.2;
+}  */
+
+.product-btn {
+  display: inline-block;
+  border: 2px solid #39f2ae;
+  background-color: #323941;
+  padding: 10px 20px;
+  border-radius: 10px 32px;
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #ffff;
+}
+
+.product-btn:hover {
+  box-shadow: 0 0 0px 1px #39f2ae,
+    0 0 10px 2px #39f2ae,
+    inset 0 0 0px 1px #39f2ae,
+    inset 0 0 15px 2px #39f2ae;
+}

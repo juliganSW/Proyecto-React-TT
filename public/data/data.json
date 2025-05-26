@@ -1,0 +1,59 @@
+
+[
+    {
+        "id": 1,
+        "modelo": "Canyon Trail",
+        "precio": 179995.00,
+        "stock": 100,
+        "imagen": "/img/reloj_hombre1.png"
+    },
+    {
+        "id": 2,
+        "modelo": "Minimal Blue",
+        "precio": 179000.00,
+        "stock": 120,
+        "imagen": "/img/reloj_hombre2.png"
+    },
+    {
+        "id": 3,
+        "modelo": "Midnight Explorer",
+        "precio": 159995.00,
+        "stock": 80,
+        "imagen": "/img/reloj_hombre3.png"
+    },
+    {
+        "id": 4,
+        "modelo": "Timeless Tech",
+        "precio": 169995.00,
+        "stock": 95,
+        "imagen": "/img/reloj_hombre4.png"
+    },
+    {
+        "id": 5,
+        "modelo": "Daily Driver",
+        "precio": 169995.00,
+        "stock": 75,
+        "imagen": "/img/reloj_hombre5.png"
+    },
+    {
+        "id": 6,
+        "modelo": "Adventure Matic",
+        "precio": 149995.00,
+        "stock": 88,
+        "imagen": "/img/reloj_hombre6.png"
+    },
+    {
+        "id": 7,
+        "modelo": "Forest Ranger",
+        "precio": 189995.00,
+        "stock": 33,
+        "imagen": "/img/reloj_hombre7.png"
+    },
+    {
+        "id": 8,
+        "modelo": "Mechanic MD4",
+        "precio": 169800.00,
+        "stock": 88,
+        "imagen": "/img/reloj_hombre8.png"
+    }
+]

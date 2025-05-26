@@ -1,0 +1,30 @@
+[
+    {
+        "id": 11,
+        "modelo": "Urban Solid MKII",
+        "precio": 179995.00,
+        "stock": 100,
+        "imagen": "/img/destacado_11.png"
+    },
+    {
+        "id": 12,
+        "modelo": "Metal Master",
+        "precio": 179995.00,
+        "stock": 120,
+        "imagen": "./img/destacado_12.png"
+    },
+    {
+        "id": 13,
+        "modelo": "Luminox Green",
+        "precio": 159995.00,
+        "stock": 80,
+        "imagen": "/img/destacado_13.png"
+    },
+    {
+        "id": 14,
+        "modelo": "Chronomat MO41",
+        "precio": 159995.00,
+        "stock": 95,
+        "imagen": "/img/destacado_14.png"
+    }
+]

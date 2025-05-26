@@ -1,0 +1,27 @@
+.servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: #b1b5c0;
+  padding: 32px;
+  margin-top: 40px;
+}
+
+.servicios {
+  i {
+    padding: 28px;
+    color: #39f2ae;
+    filter: drop-shadow(1px 1px 3px black)
+  }
+}
+.servicios p {
+  color:#000000;
+}
+
+.columna-izq, .columna-medio {
+  border-right: 2px solid rgba(0, 0, 0, 0.448);
+}
+
+.columna-izq, .columna-medio, .columna-der {
+  text-align: center;
+}

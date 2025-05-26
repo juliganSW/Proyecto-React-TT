@@ -1,0 +1,28 @@
+
+.box {
+   color:#fff;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+   font-family: 'Titillium Web', sans-serif;
+}
+.box h1 {
+   font-weight: 700;
+   font-size: 25vh;
+   margin: 0;
+   line-height: 1;
+   animation: light 4s steps(1) infinite;
+}
+.box h1 + p {
+   font-size: 3vh;
+}
+@keyframes light {
+   33% {
+      text-shadow: 0 0 20px #39f2ae62;
+   }
+   66% {
+      text-shadow: 0 0 20px #39f2ae;
+   }
+}

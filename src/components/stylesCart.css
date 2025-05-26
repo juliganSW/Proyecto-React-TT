@@ -1,0 +1,55 @@
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%); 
+  transition: transform 0.3s ease;
+  width: 300px;
+  height: 100vh;
+  background-color:#282f44;
+  box-shadow: -2px 0 5px rgba(57, 242, 174, 0.404);
+  z-index: 9999;
+  padding: 1rem;
+  overflow-y: auto;
+
+}
+
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+
+.cart-header {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-bottom: 1px solid #39f2ae;
+  margin-bottom: 1rem;
+}
+
+.headline {
+  
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.cart-content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content li {
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #39f2ae;
+  padding-bottom: 0.5rem;
+}
+
+/* .mensajeVacío {
+  color: #39f2ae;
+  text-align: center;
+  font-weight: bold;
+} */
