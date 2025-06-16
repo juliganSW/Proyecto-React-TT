@@ -42,6 +42,12 @@ nav ul li {
   color: #39f2ae;
   cursor: pointer;
 }
+/*se muestra activo el link actual */
+.link.active{
+  color:#39f2ae;
+  text-shadow:#39f2ae 1px 0 10px;
+  
+}
 
 .logoContainer{
   img{

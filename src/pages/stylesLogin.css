@@ -75,6 +75,18 @@
   rotate: 45deg;
 }
 
+.error-message {
+  color: #e63946;           
+  background-color: #ffe0e071;
+  border: 1px solid #e63946;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 
 
 

@@ -3,7 +3,7 @@ import React from 'react'
 const Admin = () => {
   return (
     <div>
-      <h1>Panel de control</h1>
+      <h1 style={{color:'white'}}>Panel de control</h1>
       
     </div>
   )
