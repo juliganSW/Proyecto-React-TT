@@ -4,9 +4,11 @@ const FormularioProducto = ({onAgregar}) => {
     const [producto, setProducto] =useState({
         modelo: '',
         precio: '',
-        descripcion: ''
+        descripcion: '',
+        stock: ''
     })
     const [error, setError]= useState({})
+    
 
     const handleChange =(e)=>{
         const{name, value} = e.target 

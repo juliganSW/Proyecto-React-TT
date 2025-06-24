@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
@@ -10,11 +10,23 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState({});
   const [isAuthenticated, setIsAuth]= useState(false);
   const navigate = useNavigate()
+  const [role, setRole] = useState('');
   
-  
+   useEffect(()=>{
+    const isAuthenticated = localStorage.getItem('isAuth') === 'true'
+    const userRole = localStorage.getItem('role') || '';
+   
+    if(isAuthenticated && userRole === 'admin'){
+      setIsAuth(true)
+      setRole(userRole)
+      navigate('/admin')
+    }else if(isAuthenticated && userRole === 'cliente'){
+      setIsAuth(true)
+      setRole(userRole)
+      navigate('/')
+    }
+},[])
 
-  
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     let validationErrors = {};
@@ -42,8 +54,13 @@ export const AuthProvider = ({ children }) => {
         
         if (foundUser.role === 'admin') {
           setIsAuth(true);
+          localStorage.setItem('isAuth', true)
+          localStorage.setItem('role', foundUser.role);
            navigate('/admin');
         } else {
+           setIsAuth(true);
+          localStorage.setItem('isAuth', true)
+          localStorage.setItem('role', foundUser.role);
           navigate('/');
         }
       }
