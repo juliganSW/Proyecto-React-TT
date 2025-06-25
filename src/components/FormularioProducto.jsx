@@ -4,8 +4,8 @@ const FormularioProducto = ({onAgregar}) => {
     const [producto, setProducto] =useState({
         modelo: '',
         precio: '',
-        descripcion: '',
-        stock: ''
+        stock: '',
+        imagen: ''
     })
     const [error, setError]= useState({})
     
@@ -22,7 +22,8 @@ const FormularioProducto = ({onAgregar}) => {
         setProducto({
             modelo: '',
             precio: '',
-            descripcion: ''
+            stock: '',
+            imagen: ''
             
         })
          setError({});
@@ -53,17 +54,27 @@ const FormularioProducto = ({onAgregar}) => {
         />
         {error.precio && <div style={{ color: 'red', fontSize: '14px' }}>{error.precio}</div>}
       </div>
-
       <div style={{ marginBottom: '15px' }}>
-        <label>Descripción:</label><br />
-        <textarea
-          name="descripcion"
-          value={producto.descripcion}
+        <label>Stock:</label><br />
+        <input
+          type="number"
+          name="stock"
+          value={producto.stock}
           onChange={handleChange}
-          rows={3}
           style={{ width: '100%', padding: '8px' }}
         />
-        {error.descripcion && <div style={{ color: 'red', fontSize: '14px' }}>{error.descripcion}</div>}
+        {error.precio && <div style={{ color: 'red', fontSize: '14px' }}>{error.precio}</div>}
+      </div>
+      <div style={{ marginBottom: '15px' }}>
+        <label>Imagen:</label><br />
+        <input
+          type="text"
+          name="imagen"
+          value={producto.imagen}
+          onChange={handleChange}
+          style={{ width: '100%', padding: '8px' }}
+        />
+        {error.precio && <div style={{ color: 'red', fontSize: '14px' }}>{error.precio}</div>}
       </div>
 
       <button

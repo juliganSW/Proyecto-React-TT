@@ -2,7 +2,7 @@ import React , {useState}from 'react'
 import './stylesProductos.css'
 import { Link } from 'react-router-dom';
 
-const Productos = ({ producto, agregarCarrito }) => {
+const Productos = ({ producto, handleAddToCart }) => {
   const [cantidad, setCantidad] = useState(1);
   const increase = () => setCantidad(prev => (prev < producto.stock ? prev + 1 : prev));
   const decrease = () => setCantidad(prev => (prev > 1 ? prev - 1 : 1));
@@ -25,7 +25,7 @@ const Productos = ({ producto, agregarCarrito }) => {
             <span>{cantidad}</span>
             <button onClick={increase}>+</button>
           </div>
-          <button onClick={() => agregarCarrito(producto)} className="product-btn agregar-btn">Agregar al Carrito</button>
+          <button onClick={() => handleAddToCart(producto)} className="product-btn agregar-btn">Agregar al Carrito</button>
           <div><Link to = {`/productos/${producto.id}`} className='link'>Ver más</Link></div>
         </div>
       </div>

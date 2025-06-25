@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext()
 
@@ -9,6 +10,7 @@ export const CartProvider = ({ children }) => {
     const [cargando, setCargando] = useState(true)
     const [error, setError] = useState(false)
     const [isAuthenticated, setIsAuth] = useState(false)
+    const[busqueda, setBusqueda] = useState('')
 
     useEffect(()=>{
      fetch('/data/data.json')
@@ -41,6 +43,9 @@ export const CartProvider = ({ children }) => {
     })
   },[])
 
+    const productoFiltrado = productos.filter((producto) => producto?.modelo. 
+    toLowerCase().includes(busqueda.toLowerCase()))
+
     const handleAddToCart = (product) => {
 
         const productInCart = cart.find((item) => item.id === product.id);
@@ -48,6 +53,7 @@ export const CartProvider = ({ children }) => {
 
             setCart(cart.map((item) => item.id === product.id ? { ...item, cantidad: product.cantidad } : item));
         } else {
+           toast.success(`El producto${product.modelo} se agregó con exito!`)
             setCart([...cart, { ...product, cantidad: product.cantidad }]);
         }
     };
@@ -59,12 +65,12 @@ export const CartProvider = ({ children }) => {
                     if (item.cantidad > 1) {
                         return { ...item, cantidad: item.cantidad - 1 };
                     } else {
-                        return null; // Si quantity es 1, marcamos para eliminar
+                        return null; 
                     }
                 } else {
-                    return item; // Si no es el producto, lo dejamos igual
+                    return item; 
                 }
-            }).filter(item => item !== null); // Quitamos los productos nulos
+            }).filter(item => item !== null); 
         });
     };
 
@@ -72,7 +78,9 @@ export const CartProvider = ({ children }) => {
         <CartContext.Provider 
         value={
 
-            { cart, productos, cargando, error, handleAddToCart, handleDeleteFromCart, isAuthenticated,setIsAuth,destacados }
+            { cart, productos, cargando, error, handleAddToCart, handleDeleteFromCart, isAuthenticated, setIsAuth, destacados,
+              productoFiltrado, busqueda, setBusqueda,
+             }
         }>
             {children}
         </CartContext.Provider>

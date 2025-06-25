@@ -8,24 +8,45 @@ export const AuthProvider = ({ children }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState({});
-  const [isAuthenticated, setIsAuth]= useState(false);
+  const [isAuthenticated, setIsAuth] = useState(false);
   const navigate = useNavigate()
   const [role, setRole] = useState('');
-  
-   useEffect(()=>{
+
+  const logout = () => {
+    localStorage.removeItem('isAuth')
+    localStorage.removeItem('role')
+    setIsAuth(false)
+    //navigate('/') 
+    setTimeout(() => {
+      navigate('/');
+    }, 100); // 
+  }
+
+  //    useEffect(()=>{
+  //     const isAuthenticated = localStorage.getItem('isAuth') === 'true'
+  //     const userRole = localStorage.getItem('role') || '';
+
+  //     if(isAuthenticated && userRole === 'admin'){
+  //       setIsAuth(true)
+  //       setRole(userRole)
+  //       navigate('/admin')
+  //     }else if(isAuthenticated && userRole === 'cliente'){
+  //       setIsAuth(true)
+  //       setRole(userRole)
+  //       navigate('/')
+  //     }
+  // },[])
+
+  useEffect(() => {
     const isAuthenticated = localStorage.getItem('isAuth') === 'true'
-    const userRole = localStorage.getItem('role') || '';
-   
-    if(isAuthenticated && userRole === 'admin'){
+    const userRole = localStorage.getItem('role') || ''
+
+    if (isAuthenticated) {
       setIsAuth(true)
       setRole(userRole)
-      navigate('/admin')
-    }else if(isAuthenticated && userRole === 'cliente'){
-      setIsAuth(true)
-      setRole(userRole)
-      navigate('/')
+
     }
-},[])
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,17 +69,17 @@ export const AuthProvider = ({ children }) => {
 
       if (!foundUser) {
         setError({ email: 'credenciales invalidas' });
-         
+
       } else {
         console.log('User role:', foundUser.role);
-        
+
         if (foundUser.role === 'admin') {
           setIsAuth(true);
           localStorage.setItem('isAuth', true)
           localStorage.setItem('role', foundUser.role);
-           navigate('/admin');
+          navigate('/admin');
         } else {
-           setIsAuth(true);
+          setIsAuth(true);
           localStorage.setItem('isAuth', true)
           localStorage.setItem('role', foundUser.role);
           navigate('/');
@@ -69,19 +90,20 @@ export const AuthProvider = ({ children }) => {
       setError({ email: 'Algo salió mal. Por favor, inténtalo de nuevo más tarde.' });
     }
   };
- 
+
 
   return (
-     <AuthContext.Provider value={{
-       email,
-    setEmail,
-    password,
-    setPassword,
-    handleSubmit,
-    error,
-    setError,
-    isAuthenticated,
-    setIsAuth
+    <AuthContext.Provider value={{
+      email,
+      setEmail,
+      password,
+      setPassword,
+      handleSubmit,
+      error,
+      setError,
+      isAuthenticated,
+      setIsAuth,
+      logout
     }}>
       {children}
     </AuthContext.Provider>

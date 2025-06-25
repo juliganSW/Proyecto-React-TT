@@ -28,10 +28,10 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     readOnly/>
             </div>
             <div>
-                <label>Nombre:</label>
+                <label>Modelo:</label>
                 <input
                     type="text"
-                    name="nombre"
+                    name="modelo"
                     value={producto.modelo || ''}
                     onChange={handleChange}/>
             </div>
@@ -60,14 +60,7 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
                     value={producto.imagen || ''}
                     onChange={handleChange}/>
             </div>
-            <div>
-                <label>Categoria:</label>
-                <input
-                    type="text"
-                    name="categoria"
-                    value={producto.categoria || ''}
-                    onChange={handleChange}/>
-            </div>
+           
             <button type="submit">Actualizar Producto</button>
         </form>
     );
