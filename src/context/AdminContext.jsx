@@ -1,8 +1,7 @@
 import { createContext, useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 export const AdminContext = createContext()
-
-
 
 export const AdminProvider = ({ children }) => {
     const [producto, setProducto] = useState([]);
@@ -42,8 +41,19 @@ export const AdminProvider = ({ children }) => {
                 throw Error('No se pudo agregar el producto')
             }
             const data = await respuesta.json()
-            alert('Producto agregado correctamente')
-            cargarProducto()
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "El producto se agregó exitosamente!",
+                showConfirmButton: false,
+                timer: 1000,
+                background: "#282f44", 
+                color: "#fff",           
+                iconColor: "#39f2ae", 
+               
+            });
+            
+        cargarProducto()
 
         } catch (error) {
             console.log(error.mensaje);
@@ -59,8 +69,19 @@ export const AdminProvider = ({ children }) => {
                     method: 'DELETE',
                 })
                 if (!respuesta.ok) throw Error('Error al eliminar el producto')
-                alert('El producto se eliminó correctamente')
-                cargarProducto()
+                    Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "El producto se eliminó exitosamente!",
+                showConfirmButton: false,
+                timer: 1000,
+                background: "#282f44", 
+                color: "#fff",           
+                iconColor: "#FF0000", 
+                border: "2px solid #39f2ae",
+            });
+            
+            cargarProducto()
 
             } catch (error) {
                 alert('Algo salió mal al eliminar el producto')
@@ -115,7 +136,7 @@ export const AdminProvider = ({ children }) => {
             agregarProducto,
             actualizarProducto,
             eliminarProducto,
-            
+
         }}>
             {children}
         </AdminContext.Provider>

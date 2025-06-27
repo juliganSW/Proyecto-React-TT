@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { CartContext } from './CartContext';
+
 
 const AuthContext = createContext();
 
@@ -18,37 +19,38 @@ export const AuthProvider = ({ children }) => {
     setIsAuth(false)
     //navigate('/') 
     setTimeout(() => {
-      navigate('/');
+    navigate('/');
     }, 100); // 
   }
 
-  //    useEffect(()=>{
-  //     const isAuthenticated = localStorage.getItem('isAuth') === 'true'
-  //     const userRole = localStorage.getItem('role') || '';
+     useEffect(()=>{
+      const isAuthenticated = localStorage.getItem('isAuth') === 'true'
+      const userRole = localStorage.getItem('role') || '';
 
-  //     if(isAuthenticated && userRole === 'admin'){
-  //       setIsAuth(true)
-  //       setRole(userRole)
-  //       navigate('/admin')
-  //     }else if(isAuthenticated && userRole === 'cliente'){
-  //       setIsAuth(true)
-  //       setRole(userRole)
-  //       navigate('/')
-  //     }
-  // },[])
+      if(isAuthenticated && userRole === 'admin'){
+        setIsAuth(true)
+        setRole(userRole)
+        navigate('/admin')
+      }else if(isAuthenticated && userRole === 'cliente'){
+        setIsAuth(true)
+        setRole(userRole)
+        navigate('/')
+      }
+  },[])
 
-  useEffect(() => {
-    const isAuthenticated = localStorage.getItem('isAuth') === 'true'
-    const userRole = localStorage.getItem('role') || ''
+  // useEffect(() => {
+  //   const isAuthenticated = localStorage.getItem('isAuth') === 'true'
+  //   const userRole = localStorage.getItem('role') || ''
 
-    if (isAuthenticated) {
-      setIsAuth(true)
-      setRole(userRole)
+  //   if (isAuthenticated) {
+  //     setIsAuth(true)
+  //     setRole(userRole)
 
-    }
-  }, [])
+  //   }
+  // }, [])
 
-  const handleSubmit = async (e) => {
+  
+ const handleSubmit = async (e) => {
     e.preventDefault();
     let validationErrors = {};
     if (!email) validationErrors.email = 'Email es requerido';
@@ -103,7 +105,7 @@ export const AuthProvider = ({ children }) => {
       setError,
       isAuthenticated,
       setIsAuth,
-      logout
+      logout,
     }}>
       {children}
     </AuthContext.Provider>

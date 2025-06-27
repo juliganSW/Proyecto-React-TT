@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext'
 
 
 function RutaProtegida({ isAuthenticated, children }) {
+  
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
