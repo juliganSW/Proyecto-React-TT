@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+//import './stylesFormularioProducto.css'
 
-function FormularioEdicion({ productoSeleccionado, onActualizar }) {
+function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
     const [producto, setProducto] = useState(productoSeleccionado);
 
     useEffect(()=>{
@@ -16,52 +17,59 @@ function FormularioEdicion({ productoSeleccionado, onActualizar }) {
         <form onSubmit={(e)=>{
             e.preventDefault()
             onActualizar(producto)
-        }}>
-            <h2>Editar Producto</h2>
-            <div>
+        }} 
+        className='form-producto'>
+            <h2 style={{'textAlign': 'center'}}>Editar Producto</h2>
+            <div className='form-group'>
                 <label>ID:</label>
                 <input
                     type="number"
                     name="id"
                     value={producto.id || ''}
                     onChange={handleChange}
-                    readOnly/>
+                    readOnly
+                    />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Modelo:</label>
                 <input
                     type="text"
                     name="modelo"
                     value={producto.modelo || ''}
-                    onChange={handleChange}/>
+                    onChange={handleChange}
+                    />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Precio:</label>
                 <input
                     type="number"
                     name="precio"
                     value={producto.precio || ''}
                     onChange={handleChange}
+                    
                     min="0"/>
             </div>
-            <div>
+            <div className='form-group'>
                 <label>stock:</label>
                 <input
                     type="number"
                     name="stock"
                     value={producto.stock || ''}
-                    onChange={handleChange}/>
+                    onChange={handleChange}
+                    />
             </div>
-            <div>
+            <div className='form-group'>
                 <label>Imagen URL:</label>
                 <input
                     type="text"
                     name="imagen"
                     value={producto.imagen || ''}
-                    onChange={handleChange}/>
+                    onChange={handleChange}
+                    />
             </div>
            
-            <button type="submit">Actualizar Producto</button>
+            <button type="submit"className='admin-add-button'>Actualizar</button>
+            <button type="button" onClick={onCerrar} className="admin-add-button">Cancelar</button>
         </form>
     );
 }

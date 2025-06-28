@@ -1,33 +1,43 @@
-
 .admin-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  /*background-color: #f5f5f5;*/
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+
 }
 
 .admin-nav {
+  top:0;
+  position: sticky;
   display: flex;
+  width: 100%;
+  height: 96px;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  padding: 0 20px;
+  background-color: #282f44fd;
+  backdrop-filter: blur(10px);
+  font-size: 1.2rem;
+  color: #ffffff;
+  box-shadow: 0px 0px 10px #00000067;
 }
 
-.admin-nav h2 {
-  margin: 0;
-}
-
-.admin-nav button {
+.admin-nav-button {
   padding: 0.5rem 1rem;
-  background-color: #e74c3c;
   color: white;
-  border: none;
+  border: 2px solid #e74c3c;
   border-radius: 6px;
   cursor: pointer;
 }
+
+.admin-icon {
+  color: #39f2ae;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+}
+
 
 .admin-title {
   font-size: 1.8rem;
@@ -71,7 +81,6 @@
 .admin-editButton,
 .admin-deleteButton {
   display: inline-block;
- 
   background-color: #323941;
   padding: 10px 20px;
   border-radius: 10px 32px;
@@ -81,22 +90,35 @@
 }
 
 .admin-editButton {
-   border: 2px solid rgba(6, 185, 240, 0.777);
-  
+  border: 2px solid #39f2ae;
 }
 
 .admin-deleteButton {
-   border: 2px solid #ff000093;
- 
+  border: 2px solid #e74c3c;
 }
 
 .admin-add-button {
-  margin-top: 2rem;
+  margin-top: 32px;
+  margin-right: 32px;
   padding: 0.75rem 1.5rem;
-  background-color: #2ecc71;
   color: white;
-  border: none;
+  border: 2px solid #39f2ae;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+}
+.admin-nav-button:hover,
+.admin-deleteButton:hover {
+   box-shadow: 0 0 0px 1px #ec5353 ,
+    0 0 10px 2px #ec5353 ,
+    inset 0 0 0px 1px #ec5353 ,
+    inset 0 0 15px 2px #ec5353 ;
+}
+
+.admin-add-button:hover,
+.admin-editButton:hover {
+  box-shadow: 0 0 0px 1px #39f2ae,
+    0 0 10px 2px #39f2ae,
+    inset 0 0 0px 1px #39f2ae,
+    inset 0 0 15px 2px #39f2ae;
 }

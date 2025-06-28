@@ -1,5 +1,8 @@
 import { createContext, useEffect, useState } from "react";
-import Swal from "sweetalert2";
+//import Swal from "sweetalert2";
+import { alertaSuccess, alertaError, alertaConfirmacion } from '../utils/alertas';
+
+
 
 export const AdminContext = createContext()
 
@@ -41,19 +44,9 @@ export const AdminProvider = ({ children }) => {
                 throw Error('No se pudo agregar el producto')
             }
             const data = await respuesta.json()
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "El producto se agregó exitosamente!",
-                showConfirmButton: false,
-                timer: 1000,
-                background: "#282f44", 
-                color: "#fff",           
-                iconColor: "#39f2ae", 
-               
-            });
-            
-        cargarProducto()
+            alertaSuccess('Producto agregado exitosamente');
+
+            cargarProducto()
 
         } catch (error) {
             console.log(error.mensaje);
@@ -61,33 +54,24 @@ export const AdminProvider = ({ children }) => {
         }
     }
 
-    const eliminarProducto = async (id) => {
-        const confirmar = window.confirm('Seguro que desea eliminar este producto?')
-        if (confirmar) {
-            try {
-                const respuesta = await fetch(`https://682ac383ab2b5004cb379c77.mockapi.io/products/${id}`, {
-                    method: 'DELETE',
-                })
-                if (!respuesta.ok) throw Error('Error al eliminar el producto')
-                    Swal.fire({
-                position: "top-end",
-                icon: "error",
-                title: "El producto se eliminó exitosamente!",
-                showConfirmButton: false,
-                timer: 1000,
-                background: "#282f44", 
-                color: "#fff",           
-                iconColor: "#FF0000", 
-                border: "2px solid #39f2ae",
-            });
-            
-            cargarProducto()
+    const eliminarProducto = (id) => {
+  alertaConfirmacion("¿Seguro que deseas eliminar este producto?", async () => {
+    try {
+      const respuesta = await fetch(`https://682ac383ab2b5004cb379c77.mockapi.io/products/${id}`, {
+        method: 'DELETE',
+      });
 
-            } catch (error) {
-                alert('Algo salió mal al eliminar el producto')
-            }
-        }
+      if (!respuesta.ok) throw Error('Error al eliminar el producto');
+
+      alertaSuccess("Producto eliminado exitosamente!");
+      cargarProducto();
+
+    } catch (error) {
+      alertaError("Algo salió mal al eliminar el producto");
     }
+  });
+};
+
 
     const actualizarProducto = async (producto) => {
         try {
@@ -100,7 +84,7 @@ export const AdminProvider = ({ children }) => {
             })
             if (!respuesta.ok) throw Error('Error al actualizar el producto')
             const data = await respuesta.json()
-            alert('Producto actualizado correctamente')
+            alertaSuccess("Producto actualizado exitosamente!");
             setOpenEditor(false)
             setSelected(null)
             cargarProducto()

@@ -7,15 +7,13 @@ import { AdminContext } from "../context/AdminContext";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
 import Spinner from '../components/estaticos/Spinner'
-import './Admin.css';
-
-
+import './stylesAdmin.css';
+import { TbLayoutDashboard } from "react-icons/tb";
 
 const Admin = () => {
   const { setIsAuth } = useContext(CartContext)
   const navigate = useNavigate()
   const { logout } = useAuth()
-
 
   const {
     loading,
@@ -29,56 +27,58 @@ const Admin = () => {
     agregarProducto,
     actualizarProducto,
     eliminarProducto,
-    
-    } = useContext(AdminContext)
-  
+
+  } = useContext(AdminContext)
+
 
   return (
-    <div className="admin-container">
-      {loading ? (
-        <Spinner />
-      ) : (
-        <>
+    <>
       <nav className="admin-nav">
-      <h2>Admin</h2>
-      <button onClick={logout}>Cerrar sesión</button>
+        <div className="admin-icon">
+          <TbLayoutDashboard />
+        </div>
+        <button onClick={logout} className="admin-nav-button">Cerrar sesión</button>
       </nav>
-      
+      <div className="admin-container">
+        {loading ? (
+          <Spinner />
+        ) : (
+          <>
+            <h1 className="admin-title">Panel Administrativo</h1>
+            <ul className="admin-list">
+              {producto.map((product) => (
 
-          <h1 className="admin-title">Panel Administrativo</h1>
-          
-          
-          <ul className="admin-list">
-            {producto.map((product) => (
-                
-              <li key={product.id} className="admin-listItem">
-                <img
-                  src={product.imagen}
-                  alt='imagen de producto'
-                  className="admin-listItemImage"
-                />
-                <span>{product.modelo}</span>
-                <span>${product.precio}</span>
-                <span>{product.stock}</span>
-                <div className="admin-buttons">
-                  <button className="admin-editButton" onClick={() => {
-                    setSelected(product);
-                    setOpenEditor(true);
-                  }}>Editar</button>
+                <li key={product.id} className="admin-listItem">
+                  <img
+                    src={product.imagen}
+                    alt='imagen de producto'
+                    className="admin-listItemImage" />
+                  <span>{product.modelo}</span>
+                  <span>${product.precio}</span>
+                  <span>{product.stock}</span>
+                  <div className="admin-buttons">
+                    <button className="admin-editButton" onClick={() => {
+                      setSelected(product);
+                      setOpenEditor(true);
+                    }}>Editar</button>
 
-                  <button className="admin-deleteButton" onClick={() =>
-                    eliminarProducto(product.id)}>Eliminar</button>
-                </div>
-              </li>
-))}
-          </ul>
-        </>
-      )}
-      <button className="admin-add-button" onClick={() => setOpen(true)}>Agregar producto</button>
-      {open && (<FormularioProducto onAgregar={agregarProducto} />)}
-      {openEditor && selected && (<FormularioEdicion productoSeleccionado={selected}
-        onActualizar={actualizarProducto} />)}
-    </div>
+                    <button className="admin-deleteButton" onClick={() =>
+                      eliminarProducto(product.id)}>Eliminar</button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        <button className="admin-add-button" onClick={() => setOpen(true)}>Agregar producto</button>
+        {open && (<FormularioProducto onAgregar={agregarProducto} onCerrar={() => setOpen(false)} />)}
+        {openEditor && selected && (<FormularioEdicion productoSeleccionado={selected}
+          onActualizar={actualizarProducto} onCerrar={() => {
+            setOpenEditor(false);
+
+          }} />)}
+      </div>
+    </>
   )
 };
 
