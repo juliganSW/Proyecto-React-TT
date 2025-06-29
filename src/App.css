@@ -21,9 +21,71 @@ body {
   background-color: #323941;
  
 }
+
 /*Estilos para los alertas */
 .swal2-popup.custom-alert {
   border: 2px solid #39f2ae;
   border-radius: 10px;
   font-family: 'Segoe UI', sans-serif;
 }
+
+/* Estilo general del contenedor de paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 6px;
+}
+
+.pagination {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pagination li {
+  list-style: none;
+}
+
+/* Ítems de paginación */
+.page-item .page-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #39f2ae;
+  padding: 6px 12px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.page-item .page-link:hover {
+  background-color: #39f2ae;
+  color: #000;
+ 
+}
+
+/*Ítem activo */
+.page-item.active .page-link {
+  background-color: #282f44;
+  color: #fff;
+  border-color: #282f44;
+}
+
+/* Botón deshabilitado */
+.page-item.disabled .page-link {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/*.visually-hidden {
+  display: none !important;
+   
+}*/
+
+
+
+
+
+
+
+

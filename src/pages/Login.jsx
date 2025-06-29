@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import { useNavigate } from 'react-router-dom'
-import llave_color from '../assets/llave_color.png'
+import { GiPadlock } from "react-icons/gi";
 import { useAuth } from '../context/AuthContext'
 import './stylesLogin.css'
 
@@ -27,7 +27,7 @@ const Login = () => {
   return (
     <div className='login-container'>
       <form onSubmit={handleSubmit} className="form">
-        <img src={llave_color} alt='imagen llave' />
+        <GiPadlock size={50} color="#fff" />
         <span className="input-span">
           <label htmlFor="email" className="label">Email</label>
           <input
