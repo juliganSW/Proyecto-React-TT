@@ -1,3 +1,29 @@
+/** Estilos para la seccion de marcas **/
+.contenedorMarcas {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 20px;
+
+  .boxMarcas {
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 10px #39f2ae8f;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+
+/*Estilos para la sección de servicios*/
 .servicios {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -24,4 +50,43 @@
 
 .columna-izq, .columna-medio, .columna-der {
   text-align: center;
+}
+
+/*media queries seccion servicios*/
+/*dispositivos pequeños*/
+@media screen and (max-width:768px){
+  .servicios{
+    grid-template:repeat(3, auto) / 1fr;
+    grid-template-areas: "columna-izq"
+    "columna-medio"
+    "columna-der";
+ }
+ .columna-izq, .columna-medio, .columna-der {
+  margin-bottom: 20px;
+ }
+
+ .columna-izq, .columna-medio {
+  border-right: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.448);
+}
+
+}
+
+/*dispositivos medianos*/
+@media screen and (min-width:769px) and (max-width: 1024px) {
+  .servicios{
+    grid-template:repeat(3, auto) / 1fr;
+    grid-template-areas: "columna-izq"
+    "columna-medio"
+    "columna-der";
+}
+.columna-izq, .columna-medio, .columna-der {
+ margin-bottom: 20px;
+}
+
+ .columna-izq, .columna-medio {
+  border-right: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.448);
+}
+
 }

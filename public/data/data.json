@@ -5,55 +5,63 @@
         "modelo": "Canyon Trail",
         "precio": 179995.00,
         "stock": 100,
-        "imagen": "/img/reloj_hombre1.png"
+        "imagen": "/img/reloj_hombre1.png",
+        "detalle": "Reloj de Pulsera Análogo, Tres Manecillas, Cronógrafo, Calendario, Indicador 24hrs y Banda de Titanio."
     },
     {
         "id": 2,
         "modelo": "Minimal Blue",
         "precio": 179000.00,
         "stock": 120,
-        "imagen": "/img/reloj_hombre2.png"
+        "imagen": "/img/reloj_hombre2.png",
+        "detalle": "Reloj de Pulsera Automático, Tres Manecillas, Visualización de la máquina en la caja trasera y Banda de Acero Inoxidable Plateado."
     },
     {
         "id": 3,
         "modelo": "Midnight Explorer",
         "precio": 159995.00,
         "stock": 80,
-        "imagen": "/img/reloj_hombre3.png"
+        "imagen": "/img/reloj_hombre3.png",
+        "detalle": "Este reloj se destaca en cualquier muñeca. El diseño ofrece un nuevo giro audaz que es esencial para su estilo ."
     },
     {
         "id": 4,
         "modelo": "Timeless Tech",
         "precio": 169995.00,
         "stock": 95,
-        "imagen": "/img/reloj_hombre4.png"
+        "imagen": "/img/reloj_hombre4.png",
+        "detalle": "El reloj Timeless Tech combina un estilo clásico con un legado que se remonta a décadas atrás. Este reloj puede ir a donde quiera que vayas sin perder el ritmo."
     },
     {
         "id": 5,
         "modelo": "Daily Driver",
         "precio": 169995.00,
         "stock": 75,
-        "imagen": "/img/reloj_hombre5.png"
+        "imagen": "/img/reloj_hombre5.png",
+        "detalle": "Analogo y resistente, con un estilo deportivo y atractivo"
     },
     {
         "id": 6,
         "modelo": "Adventure Matic",
         "precio": 149995.00,
         "stock": 88,
-        "imagen": "/img/reloj_hombre6.png"
+        "imagen": "/img/reloj_hombre6.png",
+         "detalle": "El reloj Adventure Matic combina un estilo moderno. Este reloj puede ir a donde quiera que vayas sin perder el ritmo."
     },
     {
         "id": 7,
         "modelo": "Forest Ranger",
         "precio": 189995.00,
         "stock": 33,
-        "imagen": "/img/reloj_hombre7.png"
+        "imagen": "/img/reloj_hombre7.png",
+        "detalle":"Analogo y resistente, con un estilo deportivo y atractivo"
     },
     {
         "id": 8,
         "modelo": "Mechanic MD4",
         "precio": 169800.00,
         "stock": 88,
-        "imagen": "/img/reloj_hombre8.png"
+        "imagen": "/img/reloj_hombre8.png",
+        "detalle": "Ideal para toda ocasión, con un contraste impecable entre el plateado pulido y el negro intenso del dial. Este reloj combina elegancia y versatilidad."
     }
 ]

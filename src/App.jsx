@@ -33,7 +33,8 @@ function App() {
       <Route path='/GaleriaProductos1' element={<GaleriaProductos1 agregarCarrito={handleAddToCart} eliminarProducto={handleDeleteFromCart}
         productos={productos} cart={cart}
         cargando={cargando} />} />
-      <Route path='/productos/:id' element={<DetallesProductos productos={productos} />} />
+      <Route path='/productos/:id' element={<DetallesProductos productos={productos} cargando={cargando} />} />
+
 
       <Route path='/contacto' element={<Contacto cart={cart} eliminarProducto={handleDeleteFromCart} />} />
 

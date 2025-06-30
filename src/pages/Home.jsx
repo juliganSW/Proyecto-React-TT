@@ -3,6 +3,7 @@ import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
 import Spinner from '../components/estaticos/Spinner'
 import DestacadosList from '../components/DestacadosList'
+import Marcas from '../components/Marcas'
 import Servicios from '../components/Servicios'
 
 const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) => {
@@ -17,6 +18,7 @@ const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) 
        <DestacadosList destacados={destacados} />
        
     } 
+    <Marcas />
     <Servicios />
 
     </main>

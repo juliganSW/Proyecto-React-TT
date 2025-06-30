@@ -60,7 +60,7 @@ const FormularioProducto = ({ onAgregar, onCerrar }) => {
           name="precio"
           value={producto.precio}
           onChange={handleChange} />
-        {error.modelo && <div className="form-error">{error.modelo}</div>}
+        {error.modelo && <div className="form-error">{error.precio}</div>}
       </div>
 
       <div className='form-group'>
@@ -70,7 +70,7 @@ const FormularioProducto = ({ onAgregar, onCerrar }) => {
           name="stock"
           value={producto.stock}
           onChange={handleChange} />
-        {error.modelo && <div className="form-error">{error.modelo}</div>}
+        {error.modelo && <div className="form-error">{error.stock}</div>}
 
       </div>
       <div className='form-group'>
@@ -80,7 +80,7 @@ const FormularioProducto = ({ onAgregar, onCerrar }) => {
           name="imagen"
           value={producto.imagen}
           onChange={handleChange} />
-        {error.modelo && <div className="form-error">{error.modelo}</div>}
+        {error.modelo && <div className="form-error">{error.imagen}</div>}
 
       </div>
 

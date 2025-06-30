@@ -60,10 +60,8 @@
   height: 30px;
   outline: none;
   padding: 5px;
-  border-bottom: 1.5px solid #39f2ae;
-  /*nuevo borde inferior en cada input*/
-  border-top: none;
-  /*Se eliminan los bordes del input */
+  border-bottom: 1.5px solid #39f2ae; /*nuevo borde inferior en cada input*/
+  border-top: none; /*Se eliminan los bordes del input */
   border-left: none;
   border-right: none;
   width: 100%;

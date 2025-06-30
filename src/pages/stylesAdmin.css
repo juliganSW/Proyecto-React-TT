@@ -38,11 +38,14 @@
   align-items: center;
 }
 
-
 .admin-title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
+
 
 .admin-list {
   list-style: none;
