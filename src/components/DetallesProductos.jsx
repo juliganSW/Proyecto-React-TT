@@ -17,7 +17,7 @@ const DetallesProductos = ({ productos, cargando }) => {
     <>
     <Header />
      <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Detalle del Producto</h1>
+      <h1 className='headline'>Detalle del Producto</h1>
 
       {product ? (
         <>

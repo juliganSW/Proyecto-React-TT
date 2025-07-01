@@ -18,42 +18,42 @@ const Marcas = () => {
   return (
     <div>
          
-        <h1 class="headline">Trabajamos con las mejores marcas</h1>
-        <div class="contenedorMarcas">
-            <div class="boxMarcas">
+        <h1 className="headline">Trabajamos con las mejores marcas</h1>
+        <div className="contenedorMarcas">
+            <div className="boxMarcas">
                 <img src={citizenLogo} alt="logo Citizen"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={festinaLogo} alt="logo Festina"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={bulovaLogo} alt="logo Bulova"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={swatchLogo} alt="logo Swatch"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={guessLogo} alt="logo Guess"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={bossLogo} alt="logo Boss"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={omegaLogo} alt="logo Omega"/>
             </div>
-           <div class="boxMarcas">
+           <div className="boxMarcas">
                 <img src={seikoLogo} alt="logo Seiko"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={orientLogo} alt="logo Orient"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={tissotLogo} alt="logo Tissot"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={lacosteLogo} alt="logo Lacoste"/>
             </div>
-            <div class="boxMarcas">
+            <div className="boxMarcas">
                 <img src={calvinLogo} alt="Logo Calvin Klein"/>
             </div>
         </div>

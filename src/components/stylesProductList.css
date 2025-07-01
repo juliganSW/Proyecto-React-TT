@@ -1,8 +1,5 @@
 
-.input {
-  max-width: 190px;
- 
-}
+
 
 .searchLabel {
   position: relative;
@@ -13,6 +10,7 @@
   padding: 15px 8px 15px 10px;
   text-align: left;
   margin-left: 42px;
+ 
   margin-bottom: 32px;
 }
 
@@ -31,10 +29,11 @@
   flex-direction: column;
 }
 
-.search_bar {
+input.search_bar {
   background-color: transparent;
   border: none;
   outline: none;
   font-size: 16px;
   color: white;
+  
 }

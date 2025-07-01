@@ -1,3 +1,74 @@
+/*Estilos seccion categorias*/
+.categoriasContainer {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.categoria {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.categoria img {
+  width: 200px;
+  aspect-ratio: 2/3;
+  border-radius: 10px;
+}
+
+.categoria:hover {
+  transform: scale(1.1);
+}
+
+.categoria h2 {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  border-top: 2px solid #39f2ae;
+  border-bottom: 2px solid #39f2ae;
+  background: rgba(255, 255, 255, 0.227);/* Fondo semitransparente para el texto */
+  color: #ffffff;
+  z-index: 1; /*Me aseguro de que el texto quede por encima de la imagen */
+  text-align: center;
+  font-size: 1.5rem;
+  backdrop-filter: blur(5px);
+}
+
+/*media queries seccion categorias*/
+/*dispositivos pequeños*/
+@media screen and (max-width: 768px) {
+  .categoriasContainer {
+    flex-wrap: wrap;
+    align-items: center;
+    
+  }
+  .categoria {
+    img{
+      width:180px ;
+    }
+  }
+  .categoria {
+    margin-bottom: 20px; 
+  }
+}
+
+/*dispositivos medianos*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .categoriasContainer {
+    gap: 20px;
+  }
+  .categoria {
+    margin-bottom: 20px;
+  }
+}
+
+
 /** Estilos para la seccion de marcas **/
 .contenedorMarcas {
   width: 90%;

@@ -7,7 +7,7 @@ const Contacto = ({cart, eliminarProducto}) => {
   return (
     <>
     <Header carritoItems={cart} eliminarProducto={eliminarProducto} />
-    <h1>Contactate con Nosotros</h1>
+   
     <Formulario />
     <Footer />
       

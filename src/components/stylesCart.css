@@ -7,7 +7,7 @@
   width: 300px;
   height: 100vh;
   background-color:#282f44;
-  box-shadow: -2px 0 5px rgba(57, 242, 174, 0.404);
+  box-shadow: -2px 0 5px #39f2ae;
   z-index: 9999;
   padding: 1rem;
   overflow-y: auto;
@@ -28,7 +28,6 @@
 }
 
 .headline {
-  
   color: #ffffff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
 }
@@ -48,8 +47,18 @@
   padding-bottom: 0.5rem;
 }
 
-/* .mensajeVacío {
-  color: #39f2ae;
-  text-align: center;
-  font-weight: bold;
-} */
+/*queries para dispositivos pequeños*/
+@media screen and (max-width: 768px) {
+  .cart-drawer {
+    transform: translateX(-100%);
+    width: 100vw;
+    max-width: 100%;
+    z-index: 10000;
+  }
+  .cart-drawer.open {
+    transform: translateX(0);
+  }
+}
+ 
+
+

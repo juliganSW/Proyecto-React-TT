@@ -13,7 +13,7 @@ nav {
   font-size: 1.2rem;
   color: #ffffff;
   box-shadow: 0px 0px 10px #00000067;
-  /*z-index: 999*/
+  z-index: 999
  
 }
 
@@ -59,6 +59,202 @@ button{
   border-style: none;
   background-color:transparent;
 }
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  background: #282f4491;
+  min-width: 120px;
+  border-radius: 4px;
+  z-index: 9999;
+  padding: 0;
+  box-shadow: 0 0 5px 0 #39f2ae;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+ul li ul.dropdown li {
+ 
+  padding: 10px 15px;
+  color: white;
+}
+
+.menuBtn {
+  display: none;
+}
+
+
+/*queries para pantallas pequeñas*/
+ @media screen and (max-width: 768px){
+  .logoContainer{
+    display: none;
+  }
+  .logoMenu{
+    display:block;
+    width: 200px;
+  }
+  
+ .cubierta{
+    top:-50px;
+    width: 300px;
+    height: 100%;
+    position: relative;
+  }
+  
+  .cubierta .menuBtn {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    background: #323941;
+    color: #39f2ae;
+    height: 45px;
+    width: 45px;
+    z-index: 9999;
+    border: 1px solid #39f2ae;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  #btn:checked~.menuBtn {
+    left: 247px;
+  }
+
+  .cubierta .menuBtn i {
+    position: absolute;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .cubierta .menuBtn i.fa-times {
+    opacity: 0;
+  }
+
+  #btn:checked~.menuBtn i.fa-times {
+    opacity: 1;
+    transform: rotate(-180deg);
+  }
+
+  #btn:checked~.menuBtn i.fa-bars {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+
+  .menuLateral {
+    position: absolute;
+    height: 100vh;/*ocupo todo el view height*/
+    width: 270px;
+    left: -270px;
+    transition: all 0.3s ease;
+    background-color: #282f44;
+   }
+
+  #btn:checked~.menuLateral {
+    left: 0;
+  }
+
+  .menuLateral .listaItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin:0;
+  }
+
+  .menuLateral .listaItems li {
+    line-height: 50px;
+    padding: 5px;
+    width: 100%;
+    border-top: 1px solid #b1b5c0;
+    border-bottom: 1px solid #b1b5c0;
+    transition: all 0.3s ease;
+   
+  }
+
+  .listaItems li:hover {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0px 10px 3px #39f2ae;
+  }
+
+  .listaItems li:nth-child(n) {
+    border-top: none;
+  }
+ 
+  .listaItems li:last-child {
+    border-bottom:none;
+    box-shadow: none;
+  }
+
+  .listaItems a {
+    color: #f2f2f2;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+  }
+
+  .listaItems a:hover {
+    color: #39f2ae
+  }
+  .headline{
+    text-align: center;
+  }
+
+  ul li ul.dropdown {
+  background: #282f44;
+  min-width: 220px;
+}
+ 
+ }
+
+
+
+
+
+/*media queries para dispositivos medianos*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .logoContainer{
+    img{
+      display: none;
+    }
+  }
+  
+  nav {
+    justify-content: space-evenly;
+    padding: 0 10px; /* Reduce el padding lateral */
+    height: 80px; /* Ajusta la altura de nav */
+  }
+
+  nav ul li {
+    margin: 0 15px; /* Reduce el espacio entre los elementos */
+  }
+
+.headline {
+  text-align: center;
+ }
+}
+
+
+
 
 
 

@@ -35,6 +35,7 @@ body {
   justify-content: center;
   margin-top: 40px;
   gap: 6px;
+  margin-bottom: 16px;
 }
 
 .pagination {
