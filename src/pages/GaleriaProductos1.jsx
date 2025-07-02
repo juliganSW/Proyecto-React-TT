@@ -9,20 +9,21 @@ const GaleriaProductos1 = ({cart, productos, cargando, agregarCarrito, eliminarP
   return (
     <>
     <Header carritoItems={cart} eliminarProducto={eliminarProducto}/>
-    <section>
+    <div>
         <div className="bannerMan">
             <div className="superposicion"></div>
             <div className="content">
                 <h1>Coleccion Hombre</h1>
              </div>
         </div>
-    </section>
-    <section className="products margenAbajo">
+    </div>
+    <div className="products margenAbajo">
         <h1 className="headline">Relojes para ellos</h1>
         <p className="mainText">Nuestra selección de relojes para hombre te brinda una amplia gama de opciones
              para cualquier estilo. Desde los más deportivos hasta los más sofisticados,
               encuentra el reloj que mejor se adapte a vos</p>
-    </section>
+              
+    </div>
   
 
     {

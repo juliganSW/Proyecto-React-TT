@@ -18,6 +18,7 @@
   margin: 0 auto;
   background-color: #b1b5c0;
   box-shadow: 0px 0px 10px #00000067;
+  margin-bottom: 32px;
 }
 
 .nosotrosImg {
@@ -48,5 +49,51 @@ p {
     font-size: 1rem;
     line-height: 1.6;
     color:black
+  }
+}
+
+/*media queries seccion Nosotros */
+/* dispositivos pequeños*/
+@media screen and (max-width: 768px) {
+  .nosotrosContainer {
+    flex-direction: column; 
+    padding: 20px;
+  }
+  .nosotrosImg img {
+   aspect-ratio: 4/3; 
+  }
+  .nosotrosTexto {
+    padding: 20px; 
+  }
+  .nosotrosTexto h2 {
+    font-size: 1.4rem; 
+    line-height: 1.5;
+  }
+  .nosotrosTexto p {
+   line-height: 1.4;
+  }
+}
+/*dispositivos medianos */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nosotrosContainer {
+    flex-direction: column; 
+    padding: 20px; 
+    width: 80%; 
+  }
+
+  .nosotrosImg {
+    margin-bottom: 20px; 
+  }
+
+  .nosotrosTexto {
+    padding: 16px;
+
+    h2 {
+      font-size: 1.4rem; 
+    }
+
+   p {
+      line-height: 1.5; 
+    }
   }
 }

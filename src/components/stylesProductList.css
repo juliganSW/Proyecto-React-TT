@@ -1,6 +1,4 @@
-
-
-
+/* Estilos para la barra de búsqueda */
 .searchLabel {
   position: relative;
   display: block;
@@ -10,7 +8,6 @@
   padding: 15px 8px 15px 10px;
   text-align: left;
   margin-left: 42px;
- 
   margin-bottom: 32px;
 }
 
@@ -21,7 +18,7 @@
   transform: translate(-50%, -50%);
   transition: all 0.3s ease;
   color: #c5c5c5;
-  background-color: #5e5757;
+  background-color: #39f2ae75;
   padding: 0.3em;
   border-radius: 6px;
   overflow: hidden;
@@ -35,5 +32,16 @@ input.search_bar {
   outline: none;
   font-size: 16px;
   color: white;
-  
 }
+
+@media screen and (max-width: 768px) {
+  .searchLabel {
+    margin: 0 auto 32px auto; 
+    text-align: center;
+  }
+  .shortcut {
+    right: 10px; 
+  }
+}
+
+

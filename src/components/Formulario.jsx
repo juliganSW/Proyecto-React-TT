@@ -29,7 +29,7 @@ const Formulario = () => {
                         <span id="mensajeEmail"></span>
                     </div>
                     <div className="form_input_linea">
-                        <label for="asunto" className="contacto_label">Asunto</label>
+                        <label for="asunto" className="contacto_label">Asunto&nbsp;</label>
                         <select className="custom">
                             <option selected>Elija una opción</option>
                             <option value="2">Soporte</option>

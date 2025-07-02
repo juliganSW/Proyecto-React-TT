@@ -1,67 +1,11 @@
-.headline {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  font-size: 2rem;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
-}
-
-.mainText {
-  color: #ffffff;
-  font-size: 1.3rem;
-  text-align: center;
-  line-height: 1.6;
-  padding: 0 32px 40px 32px;
-}
-
-/***********Inicio de la página coleccion hombre**********/
-.bannerMan {
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-  background-image: url(../assets/banner_hombre.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  padding-bottom: 32px;
-  position: relative;
-}
-
-.superposicion {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  z-index: 4; /*Para que el oscurecimiento esté sobre la imagen de fondo */
-}
-
-/*espacio entre la seccion productos y el footer*/
-.margenAbajo {
-  margin-bottom: 80px;
-}
-
-/**Media Queries para la seccion hombres**/
-@media only screen and (max-width:768px){
-  .bannerMan{
-    display: none;
-  }
- 
-  }
-
- /* .all-products {
+/*Estilos para la lista de productos*/
+.all-products {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   row-gap: 48px;
-}  */
+}  
 
 .product {
   width: 280px;
@@ -141,5 +85,69 @@
     0 0 10px 2px #39f2ae,
     inset 0 0 0px 1px #39f2ae,
     inset 0 0 15px 2px #39f2ae;
-    
 }
+
+.headline {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+.mainText {
+  color: #ffffff;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 32px;
+}
+
+/***********Inicio de la página coleccion hombre**********/
+.bannerMan {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  background-image: url(../assets/banner_hombre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.superposicion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  z-index: 4; /*Para que el oscurecimiento esté sobre la imagen de fondo */
+}
+
+/*espacio entre la seccion productos y el footer*/
+.margenAbajo {
+  margin-bottom: 80px;
+}
+
+/**Media Queries para la seccion hombres**/
+@media only screen and (max-width:768px){
+  .bannerMan{
+    display: none;
+}
+
+
+.headline {
+  margin-top: 32px;
+  text-align: center;
+}
+
+ 
+  }
+
+  

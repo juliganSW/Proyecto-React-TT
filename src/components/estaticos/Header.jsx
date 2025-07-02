@@ -14,7 +14,7 @@ const Header = ({ carritoItems, eliminarProducto }) => {
     <header>
        <div className="cubierta" >
             <input type="checkbox" id="btn" hidden />
-            <label htmlFor="btn" className="menuBtn">
+            <label htmlFor="btn" className="menuBtn" disabled>
               <i className="fas fa-bars"></i>
               <i className="fas fa-times"></i>
             </label>
@@ -27,7 +27,7 @@ const Header = ({ carritoItems, eliminarProducto }) => {
           <li><NavLink to='/' className='link'>Inicio</NavLink></li>
 
           <li>
-            <NavLink to="/galeriaProductos1" className="link" end>Colecciones ▾</NavLink>
+            <NavLink to="/galeriaProductos1" className="link" end>Colecciones▾</NavLink>
             <ul className="dropdown">
               <li>
                 <NavLink to='/galeriaProductos1' className='link'>Hombres</NavLink>
@@ -46,12 +46,7 @@ const Header = ({ carritoItems, eliminarProducto }) => {
             <button className='link' onClick={() => setCartOpen(true)}>
               <i className="fa-solid fa-cart-shopping"></i>
             </button>
-            <Cart
-              eliminarProducto={eliminarProducto}
-              carritoItems={carritoItems || []}
-              isOpen={isCartOpen}
-              onClose={() => setCartOpen(false)}
-            />
+            <Cart isOpen={isCartOpen} onClose={() => setCartOpen(false)}/>
           </li>
 
           <li><NavLink to='/login' className='link'><i className="fa-solid fa-user"></i></NavLink></li>

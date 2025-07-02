@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px auto;
+  margin: 48px auto;
   box-shadow: 0 0 10px 0 #39f2ae;
   border-radius: 25px;
   background-color: #323941;
@@ -124,3 +124,45 @@ select.custom {
   background-color: #39f2ae;
   color: black;
 }
+
+/**media queries para la pagina de contacto**/
+/**dispositivos pequeños **/
+@media only screen and (max-width:768px){
+  .contactoHeader .cubierta {
+    top:-210px
+  }
+  .contactoHeader .menuLateral{
+    left:-300px
+  }
+  .contacto {
+    width:80%
+ }
+ .contacto_titulo{
+  font-size: 2rem;
+ }
+
+  
+
+ .contenedor_img{
+    display: none;
+  }
+
+  .contenedor_form{
+    width: 100%;
+  }
+  .contacto_submit_boton{
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+  
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+  .contenedor_img{
+    display:none;
+  }
+  .contenedor_form{
+    width: 100%;
+  }
+}
+
+
