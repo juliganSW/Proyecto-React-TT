@@ -11,7 +11,7 @@ const Cart = ({ isOpen, onClose }) => {
     <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
       <div className='cart-header'>
         <h2 className='headline'>Carrito</h2>
-        <button onClick={onClose}>X</button>
+        <button className="cartCloseBtn" onClick={onClose}>X</button>
       </div>
       <div className='cart-content'>
         {

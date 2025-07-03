@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './stylesFormularioProducto.css'
+import '../pages/stylesAdmin.css'
 
 const FormularioProducto = ({ onAgregar, onCerrar }) => {
   const [producto, setProducto] = useState({
@@ -83,9 +83,10 @@ const FormularioProducto = ({ onAgregar, onCerrar }) => {
         {error.modelo && <div className="form-error">{error.imagen}</div>}
 
       </div>
-
+       <div className="container-buttons">
       <button type="submit" className='admin-add-button'>Agregar</button>
       <button type="button" onClick={onCerrar} className="admin-add-button">Cancelar</button>
+      </div>
     </form>
 
 

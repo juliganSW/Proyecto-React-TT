@@ -14,11 +14,11 @@ nav {
   color: #ffffff;
   box-shadow: 0px 0px 10px #00000067;
   z-index: 999
- 
 }
 
 nav ul {
-  display: flex; /*se ubica en línea la lista*/
+  display: flex;
+  /*se ubica en línea la lista*/
   padding: 100px;
 }
 
@@ -33,31 +33,34 @@ nav ul li {
   /*se elimina el subrayado a los elementos*/
   color: #ffffff;
 }
+
 .link {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .link:hover {
   color: #39f2ae;
   cursor: pointer;
 }
+
 /*se muestra activo el link actual */
-.link.active{
-  color:#39f2ae;
-  text-shadow:#39f2ae 1px 0 10px;
-  
+.link.active {
+  color: #39f2ae;
+  text-shadow: #39f2ae 1px 0 10px;
+
 }
 
-.logoContainer{
-  img{
-   width:220px;
+.logoContainer {
+  img {
+    width: 220px;
   }
 }
 
-button{
+button {
   border-style: none;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 
@@ -96,22 +99,23 @@ ul li ul.dropdown li {
 }
 
 /*queries para pantallas pequeñas*/
- @media screen and (max-width: 768px){
-  .logoContainer{
+@media screen and (max-width: 768px) {
+  .logoContainer {
     display: none;
   }
-  .logoMenu{
-    display:block;
+
+  .logoMenu {
+    display: block;
     width: 200px;
   }
-  
- .cubierta {
-  position: absolute;
-  top:0; 
-  z-index: 9999;
-}
 
-.cubierta .menuBtn {
+  .cubierta {
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .cubierta .menuBtn {
     position: absolute;
     left: 5px;
     top: 10px;
@@ -127,6 +131,10 @@ ul li ul.dropdown li {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+  }
+
+  .cubierta .menuBtn:hover {
+    border: 2px solid #ffffff
   }
 
   #btn:checked~.menuBtn {
@@ -155,7 +163,8 @@ ul li ul.dropdown li {
 
   .menuLateral {
     position: absolute;
-    height: 100vh; /*ocupo todo el view height*/
+    height: 100vh;
+    /*ocupo todo el view height*/
     width: 270px;
     left: -270px;
     transition: all 0.3s ease;
@@ -173,7 +182,7 @@ ul li ul.dropdown li {
     justify-content: flex-start;
     width: 100%;
     padding: 0;
-    margin:0;
+    margin: 0;
   }
 
   .menuLateral .listaItems li {
@@ -194,9 +203,9 @@ ul li ul.dropdown li {
   .listaItems li:nth-child(n) {
     border-top: none;
   }
- 
+
   .listaItems li:last-child {
-    border-bottom:none;
+    border-bottom: none;
     box-shadow: none;
   }
 
@@ -208,38 +217,38 @@ ul li ul.dropdown li {
     display: block;
   }
 
-.headline{
+  .headline {
     text-align: center;
   }
-  
+
   .dropdown li {
-  all: unset;
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  cursor: pointer;
+    all: unset;
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+  }
+
+  ul li ul.dropdown {
+    background-color: #282f44;
+    min-width: 220px;
+  }
+
+  /*Se eliminan los bordes superior e inferior de los items dropdown*/
+  .menuLateral .listaItems li ul.dropdown li {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  /*Se elimina el efecto hover de los items dropdown */
+  .menuLateral .listaItems li ul.dropdown li:hover {
+    box-shadow: none;
+    background: none;
+  }
+
+
+
 }
-
-ul li ul.dropdown {
-  background-color: #282f44;
-  min-width: 220px;
-}
-
-/*Se eliminan los bordes superior e inferior de los items dropdown*/
-.menuLateral .listaItems li ul.dropdown li {
-  border-top: none ;
-  border-bottom: none ;
- }
-
-/*Se elimina el efecto hover de los items dropdown */
-.menuLateral .listaItems li ul.dropdown li:hover {
-  box-shadow: none ;
-  background: none;
-}
-
-
- 
- }
 
 
 
@@ -247,25 +256,28 @@ ul li ul.dropdown {
 
 /*media queries para dispositivos medianos*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .logoContainer{
-    img{
+  .logoContainer {
+    img {
       display: none;
     }
   }
-  
+
   nav {
     justify-content: space-evenly;
-    padding: 0 10px; /* Reduce el padding lateral */
-    height: 80px; /* Ajusta la altura de nav */
+    padding: 0 10px;
+    /* Reduce el padding lateral */
+    height: 80px;
+    /* Ajusta la altura de nav */
   }
 
   nav ul li {
-    margin: 0 15px; /* Reduce el espacio entre los elementos */
+    margin: 0 15px;
+    /* Reduce el espacio entre los elementos */
   }
 
-.headline {
-  text-align: center;
- }
+  .headline {
+    text-align: center;
+  }
 }
 
 
@@ -462,7 +474,9 @@ ul li ul.dropdown {
 }
 
 @keyframes pulso {
-  35%, 65% {
+
+  35%,
+  65% {
     transform: scale(1.2)
   }
 }
@@ -482,9 +496,9 @@ ul li ul.dropdown {
 }
 
 /**Media Queries para el footer**/
-@media screen and  (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
- /*Reestructuro todo en una sola columna y 7 filas que se ajustan en auto*/
+  /*Reestructuro todo en una sola columna y 7 filas que se ajustan en auto*/
   .footer-container {
     grid-template: repeat(7, auto) / 1fr;
     grid-template-areas:
@@ -510,7 +524,8 @@ ul li ul.dropdown {
     }
   }
 
-  .arriba-izq, .centro-der ul {
+  .arriba-izq,
+  .centro-der ul {
     flex-wrap: wrap;
     gap: 10px;
   }
@@ -530,9 +545,10 @@ ul li ul.dropdown {
     padding: 10px;
   }
 }
+
 /**dispositivos medianos **/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
- .footer-container {
+  .footer-container {
     grid-template: repeat(7, auto) / 1fr;
     grid-template-areas:
       "arriba-izq"
@@ -557,7 +573,8 @@ ul li ul.dropdown {
     }
   }
 
-  .arriba-izq, .centro-der ul {
+  .arriba-izq,
+  .centro-der ul {
     flex-wrap: wrap;
     gap: 10px;
   }
@@ -577,4 +594,3 @@ ul li ul.dropdown {
     padding: 10px;
   }
 }
-

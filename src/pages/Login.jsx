@@ -2,7 +2,9 @@ import React, { useState, useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { GiPadlock } from "react-icons/gi";
+import { HiHome } from "react-icons/hi2";
 import { useAuth } from '../context/AuthContext'
+import { NavLink } from 'react-router-dom'
 import './stylesLogin.css'
 
 
@@ -25,6 +27,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
+    <>
     <div className='login-container'>
       <form onSubmit={handleSubmit} className="form">
         <GiPadlock size={50} color="#fff" />
@@ -49,9 +52,14 @@ const Login = () => {
           {error.password && <p className="error-message">{error.password}</p>}
         </span>
         <input className="submit" type="submit" value="LOG IN" />
-      </form>
-    </div>
-  )
+       </form>
+      </div>
+      <div className="backToHome">
+      <NavLink to='/' className='link'><HiHome size={50} color="#fff" /><p className="home-text">Inicio</p></NavLink>
+      </div>
+     </>
+       
+  ) 
 }
 
 export default Login

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import './stylesFormularioProducto.css'
+import '../pages/stylesAdmin.css'
 
 function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
     const [producto, setProducto] = useState(productoSeleccionado);
@@ -46,7 +46,6 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
                     name="precio"
                     value={producto.precio || ''}
                     onChange={handleChange}
-                    
                     min="0"/>
             </div>
             <div className='form-group'>
@@ -67,9 +66,10 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
                     onChange={handleChange}
                     />
             </div>
-           
+             <div className="container-buttons">
             <button type="submit"className='admin-add-button'>Actualizar</button>
             <button type="button" onClick={onCerrar} className="admin-add-button">Cancelar</button>
+            </div>
         </form>
     );
 }

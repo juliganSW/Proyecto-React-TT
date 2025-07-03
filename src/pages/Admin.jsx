@@ -44,11 +44,12 @@ const Admin = () => {
           <Spinner />
         ) : (
           <>
-            <h1 className="admin-title">Panel Administrativo</h1>
+           <h1 className="admin-title">Panel Administrativo</h1>
+            <button className="admin-add-button" onClick={() => setOpen(true)}>Agregar producto</button>
+             
             <ul className="admin-list">
               {producto.map((product) => (
-
-                <li key={product.id} className="admin-listItem">
+              <li key={product.id} className="admin-listItem">
                   <img
                     src={product.imagen}
                     alt='imagen de producto'
@@ -59,7 +60,7 @@ const Admin = () => {
                   <div className="admin-buttons">
                     <button className="admin-editButton" onClick={() => {
                       setSelected(product);
-                      setOpenEditor(true);
+                      setOpenEditor(true)
                     }}>Editar</button>
 
                     <button className="admin-deleteButton" onClick={() =>
@@ -70,13 +71,15 @@ const Admin = () => {
             </ul>
           </>
         )}
-        <button className="admin-add-button" onClick={() => setOpen(true)}>Agregar producto</button>
-        {open && (<FormularioProducto onAgregar={agregarProducto} onCerrar={() => setOpen(false)} />)}
-        {openEditor && selected && (<FormularioEdicion productoSeleccionado={selected}
+      
+        {open && (<div className="modal-overlay"><FormularioProducto onAgregar={agregarProducto} onCerrar={() => setOpen(false)} />
+          </div>)}
+        {openEditor && selected && (<div className="modal-overlay"><FormularioEdicion productoSeleccionado={selected}
           onActualizar={actualizarProducto} onCerrar={() => {
-            setOpenEditor(false);
-
-          }} />)}
+            setOpenEditor(false)
+          }} />
+          </div>
+        )}
       </div>
     </>
   )
