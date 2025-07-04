@@ -5,10 +5,14 @@ import './stylesEstaticos.css'
 import logo from '../../assets/logo.png'
 import Cart from '../Cart'
 import '../../pages/Login'
+import { useLocation } from 'react-router-dom'; // useLocation es para detectar la ruta actual
+
 
 
 const Header = ({ carritoItems, eliminarProducto }) => {
   const [isCartOpen, setCartOpen] = useState(false);
+  const location = useLocation();
+
 
   return (
     <header>
@@ -29,7 +33,12 @@ const Header = ({ carritoItems, eliminarProducto }) => {
             <li><NavLink to='/' className='link'>Inicio</NavLink></li>
 
             <li>
-              <NavLink to='/galeriaProductos1' className='link' end>Colecciones▾</NavLink>
+           {/* Si la ruta comienza con "/galeriaProductos",
+           se aplica la clase "active" para que el ítem quede resaltado */}
+             <NavLink to='/galeriaProductos1'
+             className={location.pathname.startsWith
+             ('/galeriaProductos')? 'link active' : 'link'}> Colecciones▾</NavLink>
+
               <ul className="dropdown">
                 <li>
                   <NavLink to='/galeriaProductos1' className='link'>Hombres</NavLink>
@@ -39,8 +48,6 @@ const Header = ({ carritoItems, eliminarProducto }) => {
                 </li>
               </ul>
             </li>
-
-
             <li><NavLink to='/contacto' className='link'>Contacto</NavLink></li>
             <li><NavLink to='/nosotros' className='link'>Nosotros</NavLink></li>
 

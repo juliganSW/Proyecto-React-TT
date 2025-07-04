@@ -31,6 +31,7 @@ const Admin = () => {
     eliminarProducto,
 
   } = useContext(AdminContext)
+  
 
 
   return (
