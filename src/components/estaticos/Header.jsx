@@ -29,13 +29,13 @@ const Header = ({ carritoItems, eliminarProducto }) => {
             <li><NavLink to='/' className='link'>Inicio</NavLink></li>
 
             <li>
-              <NavLink to="/galeriaProductos1" className="link" end>Colecciones▾</NavLink>
+              <NavLink to='/galeriaProductos1' className='link' end>Colecciones▾</NavLink>
               <ul className="dropdown">
                 <li>
                   <NavLink to='/galeriaProductos1' className='link'>Hombres</NavLink>
                 </li>
                 <li>
-                  <NavLink to='/coleccion-mujeres' className='link'>Mujeres</NavLink>
+                  <NavLink to='/galeriaProductos2' className='link'>Mujeres</NavLink>
                 </li>
               </ul>
             </li>

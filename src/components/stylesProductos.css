@@ -145,9 +145,35 @@
 .headline {
   margin-top: 32px;
   text-align: center;
+ }
 }
 
- 
+/* Estilos para la sección colección mujeres*/
+.banner {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  background-image: url(../assets/banner_mujer_new.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+/**Media Queries para la seccion mujeres**/
+@media only screen and (max-width:768px){
+  .banner{
+    display: none;
   }
+  .header .cubierta{
+    top:-10px
+ }
+ .header .menuLateral{
+  left:-300px
+ }
+}
 
   

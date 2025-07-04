@@ -46,6 +46,21 @@ export const CartProvider = ({ children }) => {
         setError(true)
       })
   }, [])
+  useEffect(() => {
+    fetch('/data/data3.json')
+      .then(response => response.json())
+      .then(datos => {
+        setTimeout(() => {
+          setProductos(datos)
+          setCargando(false)
+        }, 2000);
+      })
+      .catch(error => {
+        console.log('Error', error)
+        setCargando(false)
+        setError(true)
+      })
+  }, [])
    useEffect(()=>{
         localStorage.setItem("cart", JSON.stringify(cart))
     },[cart])

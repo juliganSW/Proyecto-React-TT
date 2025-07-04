@@ -9,6 +9,8 @@ import { useAuth } from '../context/AuthContext';
 import Spinner from '../components/estaticos/Spinner'
 import './stylesAdmin.css';
 import { TbLayoutDashboard } from "react-icons/tb";
+import { Helmet } from 'react-helmet-async'
+
 
 const Admin = () => {
   const { setIsAuth } = useContext(CartContext)
@@ -33,6 +35,12 @@ const Admin = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Goodstone Admin Panel</title>
+        <meta name="description" content="Panel administrativo para gestionar productos." />
+        <meta name="robots" content="noindex, nofollow" />
+
+      </Helmet>
       <nav className="admin-nav">
         <div className="admin-icon">
           <TbLayoutDashboard />
@@ -44,12 +52,12 @@ const Admin = () => {
           <Spinner />
         ) : (
           <>
-           <h1 className="admin-title">Panel Administrativo</h1>
+            <h1 className="admin-title">Panel Administrativo</h1>
             <button className="admin-add-button" onClick={() => setOpen(true)}>Agregar producto</button>
-             
+
             <ul className="admin-list">
               {producto.map((product) => (
-              <li key={product.id} className="admin-listItem">
+                <li key={product.id} className="admin-listItem">
                   <img
                     src={product.imagen}
                     alt='imagen de producto'
@@ -71,14 +79,14 @@ const Admin = () => {
             </ul>
           </>
         )}
-      
+
         {open && (<div className="modal-overlay"><FormularioProducto onAgregar={agregarProducto} onCerrar={() => setOpen(false)} />
-          </div>)}
+        </div>)}
         {openEditor && selected && (<div className="modal-overlay"><FormularioEdicion productoSeleccionado={selected}
           onActualizar={actualizarProducto} onCerrar={() => {
             setOpenEditor(false)
           }} />
-          </div>
+        </div>
         )}
       </div>
     </>

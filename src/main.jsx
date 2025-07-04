@@ -7,6 +7,7 @@ import { AuthProvider } from './context/AuthContext.jsx'
 import { AdminProvider } from './context/AdminContext.jsx'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -15,6 +16,7 @@ import { ToastContainer } from 'react-toastify'
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
+    <HelmetProvider>
     <Router>
       <CartProvider>
         <AdminProvider>
@@ -25,5 +27,6 @@ createRoot(document.getElementById('root')).render(
         </AdminProvider>
       </CartProvider>
     </Router>
+    </HelmetProvider>
   </StrictMode>,
 )

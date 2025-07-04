@@ -6,6 +6,7 @@ import NotFound from './pages/NotFound'
 import Contacto from './pages/Contacto'
 import Cart from './components/Cart'
 import GaleriaProductos1 from './pages/GaleriaProductos1'
+import GaleriaProductos2 from './pages/GaleriaProductos2'
 import Nosotros from './pages/Nosotros'
 import DetallesProductos from './components/DetallesProductos'
 import Login from './pages/Login'
@@ -15,14 +16,12 @@ import { CartContext } from './context/CartContext'
 import { useAuth } from './context/AuthContext';
 
 
-
 function App() {
   const { cart, productos, cargando, destacados, error, handleAddToCart, handleDeleteFromCart } = useContext(CartContext)
-  
+
   const { isAuthenticated } = useAuth();
 
   return (
-
 
     <Routes>
 
@@ -33,23 +32,24 @@ function App() {
       <Route path='/GaleriaProductos1' element={<GaleriaProductos1 agregarCarrito={handleAddToCart} eliminarProducto={handleDeleteFromCart}
         productos={productos} cart={cart}
         cargando={cargando} />} />
-      <Route path='/productos/:id' element={<DetallesProductos productos={productos} cargando={cargando} />} />
 
+      <Route path='/GaleriaProductos2' element={<GaleriaProductos2 agregarCarrito={handleAddToCart} eliminarProducto={handleDeleteFromCart}
+        productos={productos} cart={cart}
+        cargando={cargando} />} />
+
+      <Route path='/productos/:id' element={<DetallesProductos productos={productos} cargando={cargando} />} />
 
       <Route path='/contacto' element={<Contacto cart={cart} eliminarProducto={handleDeleteFromCart} />} />
 
       <Route path='/nosotros' element={<Nosotros cart={cart} eliminarProducto={handleDeleteFromCart} />} />
+
       <Route path='/admin' element={<RutaProtegida isAuthenticated={isAuthenticated}> <Admin /> </RutaProtegida>} />
 
       <Route path='/login' element={<Login />} />
 
       <Route path='*' element={<NotFound />} />
 
-
     </Routes>
-
-
-
   )
 }
 

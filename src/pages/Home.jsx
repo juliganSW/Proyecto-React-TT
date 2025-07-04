@@ -7,30 +7,41 @@ import DestacadosList from '../components/DestacadosList'
 import Marcas from '../components/Marcas'
 import Servicios from '../components/Servicios'
 import Categorias from '../components/Categorias'
+import { Helmet } from 'react-helmet-async'
 
 const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) => {
   return (
     <>
-    <Header agregarCarrito={agregarCarrito} eliminarProducto={eliminarProducto} carritoItems= {cart} />
-    <main>
-    <MainBackGr />
-      <h1 className='headline'><span> Modelos más populares</span></h1>
-    
-     {
-      cargando ? <Spinner /> :
-       <DestacadosList destacados={destacados} />
-       
-    } 
-    <Categorias />
-    <Marcas />
-    <Servicios />
+      <Helmet>
+        <title>Goodstone Watch Store - Tienda online - Inicio</title>
+        <meta name="description" content="Tienda online de relojes exclusivos con descuentos y envíos gratis." />
+        <meta name="keywords" content="relojes, tienda online, descuentos, hombres, mujeres" />
+        <meta name="author" content="Goodstone Watches, Inc." />
+        <meta property="og:url" content="https://goodstone.vercel.app" />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
-    </main>
+      <Header agregarCarrito={agregarCarrito} eliminarProducto={eliminarProducto} carritoItems={cart} />
 
-    <Footer />
+      <main>
+        <MainBackGr />
+        <h1 className='headline'><span> Modelos más populares</span></h1>
+
+        {
+          cargando ? <Spinner /> :
+            <DestacadosList destacados={destacados} />
+
+        }
+        <Categorias />
+        <Marcas />
+        <Servicios />
+
+      </main>
+
+      <Footer />
     </>
-      
-    
+
+
   )
 }
 

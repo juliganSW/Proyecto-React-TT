@@ -1,0 +1,67 @@
+
+[
+    {
+        "id": 9,
+        "modelo": "Golden Star II",
+        "precio": 179995.00,
+        "stock": 100,
+        "imagen": "/img/reloj_dama1.png",
+        "detalle": "Reloj de Pulsera Análogo, Tres Manecillas, Cronógrafo, Calendario, Indicador 24hrs y Banda de Titanio."
+    },
+    {
+        "id": 10,
+        "modelo": "London Grace",
+        "precio": 179000.00,
+        "stock": 120,
+        "imagen": "/img/reloj_dama2.png",
+        "detalle": "Reloj de Pulsera Automático, Tres Manecillas, Visualización de la máquina en la caja trasera y Banda de Acero Inoxidable Plateado."
+    },
+    {
+        "id": 11,
+        "modelo": "Radiant Enigma",
+        "precio": 159995.00,
+        "stock": 80,
+        "imagen": "/img/reloj_dama3.png",
+        "detalle": "Este reloj se destaca en cualquier muñeca. El diseño ofrece un nuevo giro audaz que es esencial para su estilo ."
+    },
+    {
+        "id": 12,
+        "modelo": "Snow White",
+        "precio": 169995.00,
+        "stock": 95,
+        "imagen": "/img/reloj_dama4.png",
+        "detalle": "El reloj Timeless Tech combina un estilo clásico con un legado que se remonta a décadas atrás. Este reloj puede ir a donde quiera que vayas sin perder el ritmo."
+    },
+    {
+        "id": 13,
+        "modelo": "Cristal Kyber 38",
+        "precio": 169995.00,
+        "stock": 75,
+        "imagen": "/img/reloj_dame5.png",
+        "detalle": "Analogo y resistente, con un estilo deportivo y atractivo"
+    },
+    {
+        "id": 14,
+        "modelo": "Green Velvet",
+        "precio": 149995.00,
+        "stock": 88,
+        "imagen": "/img/reloj_dama6.png",
+         "detalle": "El reloj Adventure Matic combina un estilo moderno. Este reloj puede ir a donde quiera que vayas sin perder el ritmo."
+    },
+    {
+        "id": 15,
+        "modelo": "Sporty Spice",
+        "precio": 189995.00,
+        "stock": 33,
+        "imagen": "/img/reloj_dama7.png",
+        "detalle":"Analogo y resistente, con un estilo deportivo y atractivo"
+    },
+    {
+        "id": 16,
+        "modelo": "Lady Magnet",
+        "precio": 169800.00,
+        "stock": 88,
+        "imagen": "/img/reloj_dama8.png",
+        "detalle": "Ideal para toda ocasión, con un contraste impecable entre el plateado pulido y el negro intenso del dial. Este reloj combina elegancia y versatilidad."
+    }
+]
