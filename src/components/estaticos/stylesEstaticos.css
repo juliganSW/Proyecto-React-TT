@@ -272,7 +272,6 @@ nav {
     text-align: center;
   }
    
-  
 }
 
 
@@ -460,7 +459,7 @@ nav {
 .pulso {
   animation-name: pulso;
   animation-iteration-count: infinite;
-  animation-duration: .8s
+  animation-duration: 1s
 }
 
 @keyframes pulso {

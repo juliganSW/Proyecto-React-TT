@@ -64,7 +64,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <a href="#" target="_blank"><i className="fa-brands fa-whatsapp pulso"></i></a>
+            <a href="#" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
           </div>
           <div className="abajo">
             <div>

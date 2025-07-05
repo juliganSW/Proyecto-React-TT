@@ -19,6 +19,7 @@
     "react-router-dom": "^7.6.0",
     "react-spinners": "^0.17.0",
     "react-toastify": "^11.0.5",
+    "react-tooltip": "^5.29.1",
     "sweetalert2": "^11.22.1"
   },
   "devDependencies": {

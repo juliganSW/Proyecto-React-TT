@@ -8,6 +8,7 @@ import { useAuth } from '../context/AuthContext';
 import Spinner from '../components/estaticos/Spinner'
 import './stylesAdmin.css';
 import { TbLayoutDashboard } from "react-icons/tb";
+import { TbLayoutGridAdd } from "react-icons/tb";
 import { Helmet } from 'react-helmet-async'
 
 
@@ -52,7 +53,8 @@ const Admin = () => {
         ) : (
           <>
             <h1 className="admin-title">Panel Administrativo</h1>
-            <button className="admin-add-button" aria-label="Agregar Producto" onClick={() => setOpen(true)}>Agregar producto</button>
+            {/* <button className="admin-add-button" aria-label="Agregar Producto" onClick={() => setOpen(true)}>Agregar producto</button> */}
+            
 
             <ul className="admin-list">
               {producto.map((product) => (
@@ -88,6 +90,13 @@ const Admin = () => {
         </div>
         )}
       </div>
+      <div className="tooltip">
+      <button>
+      <TbLayoutGridAdd  className="add-adminBtn pulso" 
+      aria-label="Agregar producto"  onClick={() => setOpen(true)} /></button>
+      <span className="tooltip-text">Agregar producto</span>
+      </div>
+       
     </>
   )
 };
