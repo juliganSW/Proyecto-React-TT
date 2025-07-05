@@ -1,17 +1,14 @@
 
-
-
 .login-container {
  display: flex;
  justify-content: center;
  align-items: center;
  margin: 60px auto;
-  
-  padding: 40px;
-  border-radius: 20px;
-  width:400px;
-  background-color: #16161695;
-  box-shadow: 0px 15px 40px #39f2ae;
+ padding: 40px;
+ border-radius: 20px;
+ width:380px;
+ background-color: #16161695;
+ box-shadow: 0px 15px 40px #39f2ae;
 }
 .backToHome {
   display: flex;
@@ -22,8 +19,6 @@
 .home-text {
   text-align: center;
   font-size: 1.2rem;
- 
-  
 }
 
 .form {
@@ -31,7 +26,6 @@
   --bg-dark: #707070;
   --clr: #58bc82;
   --clr-alpha: #9c9c9c60;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,37 +87,76 @@
   color:#707070;
 }
 
-.form img {
-  width: 150px;
-  rotate: 45deg;
-}
-
 .error-message {
   color: #e63946;           
-  
   margin-top: 6px;
   font-size: 0.9rem;
   font-weight: 500;
-  
 }
-/*media queries para dispositivos pequeños*/
+
+/*media queries para dispositivos medianos*/
 @media screen and (max-width: 768px) {
   .login-container {
-    padding: 2rem;
+    width: 60%;
+    padding: 30px;
+    margin: 40px auto;
   }
 
   .form {
-    width: 100%;
-    max-width: 350px;
-    margin: auto;
+    gap: 0.8rem;
   }
 
-  .input-span {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+  .form input[type="email"],
+  .form input[type="password"],
+  .form .submit {
+    width: 80%;
+    font-size: 0.95rem;
+    padding: 0.9rem 0.75rem;
+  }
+  .label {
+    font-size: 0.95rem;
+    margin-left: 40px;
+  }
+
+ .home-text {
+    font-size: 1rem;
   }
 }
+
+/*media queries para dispositivos pequeños */
+@media screen and (max-width: 480px) {
+  .login-container {
+    width: 80%;
+    padding: 25px;
+    margin: 30px auto;
+  }
+
+  .form input[type="email"],
+  .form input[type="password"],
+  .form .submit {
+    padding: 0.8rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .form .submit {
+    border-radius: 1.5rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+
+  .home-text {
+    font-size: 0.9rem;
+  }
+
+  .backToHome svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 
 
 

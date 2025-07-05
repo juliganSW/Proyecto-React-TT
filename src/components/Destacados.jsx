@@ -5,12 +5,9 @@ const Destacados = ({ destacado }) => {
   
 
   return (
-     
-            
     <div className="all-products">
       <div className="product">
-      
-        <img src={destacado.imagen} alt="imagen reloj" />
+     <img src={destacado.imagen} alt="imagen reloj" />
         <div className="product-info">
           <h2 className="product-title">{destacado.modelo}</h2>
           <p className="product-off">15%OFF</p>
@@ -20,6 +17,7 @@ const Destacados = ({ destacado }) => {
         </div>
       </div>
     </div>
+    
     
   )
 }

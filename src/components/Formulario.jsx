@@ -11,7 +11,6 @@ const Formulario = () => {
             </div>
             <div className="contenedor_form">
                 <h1 className="contacto_titulo">Contactate con nosotros</h1>
-
                 <form action="" method="" className="contacto_form" id="form">
                     <div className="form_input_linea">
                         <label for="nombre" className="contacto_label">Nombre</label>

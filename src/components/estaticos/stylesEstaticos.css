@@ -1,7 +1,8 @@
+
 /* Estilos para la barra de navegacion */
 nav {
-  top: 20px;
-  position: sticky;
+  top: 0;
+  position: fixed;
   display: flex;
   width: 100%;
   height: 96px;
@@ -58,6 +59,7 @@ nav ul li {
   }
 }
 
+
 button {
   border-style: none;
   background-color: transparent;
@@ -111,7 +113,7 @@ ul li ul.dropdown li {
 
   .cubierta {
     position: absolute;
-    top: 0;
+    top: -10px;
     z-index: 9999;
   }
 
@@ -256,22 +258,21 @@ ul li ul.dropdown li {
     }
   }
 
-  nav {
+nav {
     justify-content: space-evenly;
-    padding: 0 10px;
-    /* Reduce el padding lateral */
-    height: 80px;
-    /* Ajusta la altura de nav */
+    padding: 0 10px; /* Reduce el padding lateral */
+    height: 80px; /* Ajusta la altura de nav */
   }
 
-  nav ul li {
-    margin: 0 15px;
-    /* Reduce el espacio entre los elementos */
+ nav ul li {
+    margin: 0 15px; /* Reduce el espacio entre los elementos */
   }
 
   .headline {
     text-align: center;
   }
+   
+  
 }
 
 
@@ -463,7 +464,6 @@ ul li ul.dropdown li {
 }
 
 @keyframes pulso {
-
   35%,
   65% {
     transform: scale(1.2)
@@ -499,9 +499,13 @@ ul li ul.dropdown li {
       "centro-der"
       "abajo";
   }
+  .email-container input {
+  margin:4px
+}
 
-  .email-input {
-    width: 100%;
+  .email-input,
+  .btnEmail {
+    width: 95%;
     margin-bottom: 10px;
   }
 
@@ -519,11 +523,7 @@ ul li ul.dropdown li {
     gap: 10px;
   }
 
-  .btnEmail {
-    width: 100%;
-  }
-
-  .centro-der {
+ .centro-der {
     img {
       max-width: 68px;
     }

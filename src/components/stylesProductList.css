@@ -42,6 +42,10 @@ input.search_bar {
   .shortcut {
     right: 10px; 
   }
+  .headline {
+    text-align: center;
+    margin-left: -35px;
+  }
 }
 
 

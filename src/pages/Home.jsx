@@ -17,31 +17,27 @@ const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) 
         <meta name="description" content="Tienda online de relojes exclusivos con descuentos y envíos gratis." />
         <meta name="keywords" content="relojes, tienda online, descuentos, hombres, mujeres" />
         <meta name="author" content="Goodstone Watches, Inc." />
-        <meta property="og:url" content="https://goodstone.vercel.app" />
+        <meta property="og:url" content="https://goodstone.app" />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <Header agregarCarrito={agregarCarrito} eliminarProducto={eliminarProducto} carritoItems={cart} />
-
       <main>
         <MainBackGr />
-        <h1 className='headline'><span> Modelos más populares</span></h1>
+        <h1 className='headline'> Modelos más populares</h1>
 
         {
           cargando ? <Spinner /> :
             <DestacadosList destacados={destacados} />
-
         }
+        <h1 className="headline">Nuestras categorías</h1>
         <Categorias />
+        <h1 className="headline">Tenemos las mejores marcas</h1>
         <Marcas />
         <Servicios />
-
       </main>
-
       <Footer />
     </>
-
-
   )
 }
 

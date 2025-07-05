@@ -12,12 +12,11 @@ const Contacto = ({ cart, eliminarProducto }) => {
         <meta name="description" content="Contactá con Goodstone para recibir asesoramiento, realizar consultas o solicitar soporte técnico." />
         <meta name="keywords" content="contacto, atención al cliente, soporte, consultas, Goodstone" />
         <meta name="author" content="Goodstone Watches, Inc." />
-        <meta property="og:url" content="https://goodstone.vercel.app/contacto" />
+        <meta property="og:url" content="https://goodstone.app/contacto" />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <Header carritoItems={cart} eliminarProducto={eliminarProducto} />
-
       <Formulario />
       <Footer />
 

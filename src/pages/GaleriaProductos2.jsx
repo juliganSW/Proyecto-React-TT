@@ -29,20 +29,15 @@ const GaleriaProductos2 = ({ cart, productos, cargando, agregarCarrito, eliminar
       </div>
       <div className="products margenAbajo">
         <h1 className="headline">Relojes para ellas</h1>
-        <p className="mainText">Descubre el reloj que te define. 
-            Nuestra colección para mujer te ofrece una amplia variedad de estilos, 
-            desde los más clásicos y elegantes hasta los más modernos y atrevidos.</p>
-        </div>
-
-
+        <p className="mainText">Descubre el reloj que te define.
+          Nuestra colección para mujer te ofrece una amplia variedad de estilos,
+          desde los más clásicos y elegantes hasta los más modernos y atrevidos.</p>
+      </div>
       {
         cargando ? <Spinner /> :
           <ProductList agregarCarrito={agregarCarrito} productos={productos} />
       }
-
       <Footer />
-
-
     </>
   )
 }

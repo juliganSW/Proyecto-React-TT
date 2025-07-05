@@ -1,11 +1,14 @@
-
+.error_container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
 .box {
-   color:#fff;
    text-align: center;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   
    font-family: 'Titillium Web', sans-serif;
 }
 .box h1 {
@@ -16,8 +19,16 @@
    animation: light 4s steps(1) infinite;
 }
 .box h1 + p {
+   color:#fff;
    font-size: 3vh;
 }
+.box img {
+   width: 360px;
+}
+button p{
+   font-size: 1.3rem;
+}
+
 @keyframes light {
    33% {
       text-shadow: 0 0 20px #39f2ae62;

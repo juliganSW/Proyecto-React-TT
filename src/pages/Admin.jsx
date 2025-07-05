@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-
 import FormularioProducto from "../components/FormularioProducto";
 import FormularioEdicion from "../components/FormularioEdicion";
 import { CartContext } from "../context/CartContext";
@@ -40,13 +39,12 @@ const Admin = () => {
         <title>Goodstone Admin Panel</title>
         <meta name="description" content="Panel administrativo para gestionar productos." />
         <meta name="robots" content="noindex, nofollow" />
-
       </Helmet>
       <nav className="admin-nav">
         <div className="admin-icon">
           <TbLayoutDashboard />
         </div>
-        <button onClick={logout} className="admin-nav-button">Cerrar sesión</button>
+        <button onClick={logout} className="admin-nav-button" aria-label="Cerrar sesión">Cerrar sesión</button>
       </nav>
       <div className="admin-container">
         {loading ? (
@@ -54,7 +52,7 @@ const Admin = () => {
         ) : (
           <>
             <h1 className="admin-title">Panel Administrativo</h1>
-            <button className="admin-add-button" onClick={() => setOpen(true)}>Agregar producto</button>
+            <button className="admin-add-button" aria-label="Agregar Producto" onClick={() => setOpen(true)}>Agregar producto</button>
 
             <ul className="admin-list">
               {producto.map((product) => (
@@ -67,12 +65,12 @@ const Admin = () => {
                   <span>${product.precio}</span>
                   <span>{product.stock}</span>
                   <div className="admin-buttons">
-                    <button className="admin-editButton" onClick={() => {
+                    <button className="admin-editButton" aria-label="Editar producto" onClick={() => {
                       setSelected(product);
                       setOpenEditor(true)
                     }}>Editar</button>
 
-                    <button className="admin-deleteButton" onClick={() =>
+                    <button className="admin-deleteButton" aria-label="Eliminar producto" onClick={() =>
                       eliminarProducto(product.id)}>Eliminar</button>
                   </div>
                 </li>

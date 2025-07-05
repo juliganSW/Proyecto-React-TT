@@ -27,8 +27,7 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
                     name="id"
                     value={producto.id || ''}
                     onChange={handleChange}
-                    readOnly
-                    />
+                    readOnly/>
             </div>
             <div className='form-group'>
                 <label>Modelo:</label>
@@ -36,8 +35,7 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
                     type="text"
                     name="modelo"
                     value={producto.modelo || ''}
-                    onChange={handleChange}
-                    />
+                    onChange={handleChange}/>
             </div>
             <div className='form-group'>
                 <label>Precio:</label>
@@ -54,8 +52,7 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
                     type="number"
                     name="stock"
                     value={producto.stock || ''}
-                    onChange={handleChange}
-                    />
+                    onChange={handleChange}/>
             </div>
             <div className='form-group'>
                 <label>Imagen URL:</label>
@@ -63,12 +60,11 @@ function FormularioEdicion({ productoSeleccionado, onActualizar, onCerrar }) {
                     type="text"
                     name="imagen"
                     value={producto.imagen || ''}
-                    onChange={handleChange}
-                    />
+                    onChange={handleChange}/>
             </div>
-             <div className="container-buttons">
-            <button type="submit"className='admin-add-button'>Actualizar</button>
-            <button type="button" onClick={onCerrar} className="admin-add-button">Cancelar</button>
+            <div className="container-buttons">
+            <button type="submit"className='admin-add-button' aria-label='Actualizar producto'>Actualizar</button>
+            <button type="button" onClick={onCerrar} className="admin-add-button" aria-label='Cancelar'>Cancelar</button>
             </div>
         </form>
     );

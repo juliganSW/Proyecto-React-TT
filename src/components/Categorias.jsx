@@ -9,7 +9,6 @@ import reloj_tourbillon from '../assets/reloj_tourbillon.jpg'
 const Categorias = () => {
   return (
      <div className="categorias">
-        <h1 className="headline">Nuestras categorías</h1>
         <div className="categoriasContainer">
            <div className="categoria">
             <h2>Classic</h2>

@@ -57,11 +57,11 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)} />
             {error.password && <p className="error-message">{error.password}</p>}
           </span>
-          <input className="submit" type="submit" value="LOG IN" />
+          <input className="submit" type="submit" aria-label='Iniciar sesion' value="LOG IN" />
         </form>
       </div>
       <div className="backToHome">
-        <NavLink to='/' className='link'><HiHome size={50} color="#fff" /><p className="home-text">Inicio</p></NavLink>
+        <NavLink to='/' className='link' aria-label='Ir al inicio'><HiHome size={50} color="#fff" aria-hidden='true' /><p className="home-text">Inicio</p></NavLink>
       </div>
     </>
 

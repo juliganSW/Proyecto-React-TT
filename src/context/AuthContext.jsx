@@ -38,19 +38,8 @@ export const AuthProvider = ({ children }) => {
       }
   },[])
 
-  // useEffect(() => {
-  //   const isAuthenticated = localStorage.getItem('isAuth') === 'true'
-  //   const userRole = localStorage.getItem('role') || ''
-
-  //   if (isAuthenticated) {
-  //     setIsAuth(true)
-  //     setRole(userRole)
-
-  //   }
-  // }, [])
-
   
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
     let validationErrors = {};
     if (!email) validationErrors.email = 'Email es requerido';

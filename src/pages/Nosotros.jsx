@@ -15,7 +15,7 @@ const Nosotros = ({cart, eliminarProducto}) => {
   <meta name="description" content="Conocé la historia de Goodstone Watch Store, nuestra visión y compromiso con la calidad." />
   <meta name="keywords" content="sobre nosotros, historia, quienes somos, relojería, Goodstone" />
   <meta name="author" content="Goodstone Watches, Inc." />
-  <meta property="og:url" content="https://goodstone.vercel.app/nosotros" />
+  <meta property="og:url" content="https://goodstone.app/nosotros" />
   <meta property="og:type" content="website" />
 </Helmet>
           

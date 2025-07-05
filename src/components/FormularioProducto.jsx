@@ -84,8 +84,8 @@ const FormularioProducto = ({ onAgregar, onCerrar }) => {
 
       </div>
        <div className="container-buttons">
-      <button type="submit" className='admin-add-button'>Agregar</button>
-      <button type="button" onClick={onCerrar} className="admin-add-button">Cancelar</button>
+      <button type="submit" className='admin-add-button' aria-label='Agregar producto'>Agregar</button>
+      <button type="button" onClick={onCerrar} className="admin-add-button" aria-label='Cancelar'>Cancelar</button>
       </div>
     </form>
 

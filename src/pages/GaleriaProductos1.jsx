@@ -14,7 +14,7 @@ const GaleriaProductos1 = ({ cart, productos, cargando, agregarCarrito, eliminar
         <meta name="description" content="Explorá la exclusiva colección de relojes para hombre de Goodstone Watches" />
         <meta name="keywords" content="relojes para hombre, colección masculina, moda, elegancia, Goodstone" />
         <meta name="author" content="Goodstone Watches, Inc." />
-        <meta property="og:url" content="https://goodstone.vercel.app/galeriaProductos1" />
+        <meta property="og:url" content="https://goodstone.app/galeriaProductos1" />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -32,17 +32,12 @@ const GaleriaProductos1 = ({ cart, productos, cargando, agregarCarrito, eliminar
         <p className="mainText">Nuestra selección de relojes para hombre te brinda una amplia gama de opciones
           para cualquier estilo. Desde los más deportivos hasta los más sofisticados,
           encuentra el reloj que mejor se adapte a vos</p>
-
       </div>
-
-
       {
         cargando ? <Spinner /> :
           <ProductList agregarCarrito={agregarCarrito} productos={productos} />
       }
-
       <Footer />
-
 
     </>
   )

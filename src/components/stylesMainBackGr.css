@@ -93,11 +93,7 @@
 /**media queries para el contenedor del background principal**/
 /*Media queries para dispositivos pequeños*/
 @media screen and (max-width: 768px) {
-  .infoBar {
-    display: none;
-  }
-
- .contenedor {
+  .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,17 +125,6 @@
 
 /*dispositivos medianos*/
 @media (min-width: 769px) and (max-width: 1024px) {
-  .infoBar {
-    p{
-      display: none;
-    }
-  }
-  p.encabezado{
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    color: #39f2ae;
-  }
  .contenedorImg img {
     width: 180px; 
 }
