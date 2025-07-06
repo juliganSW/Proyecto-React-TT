@@ -8,14 +8,16 @@ import '../../pages/Login'
 import { useLocation } from 'react-router-dom'; // useLocation es para detectar la ruta actual
 
 
+
+
 const Header = ({ carritoItems, eliminarProducto }) => {
   const [isCartOpen, setCartOpen] = useState(false);
   const location = useLocation();
 
   return (
+  
     <header>
-     
-    <div className="cubierta" >
+      <div className="cubierta" >
         <input type="checkbox" id="btn" hidden />
         {!isCartOpen && (
           <label htmlFor="btn" className="menuBtn" aria-label='Abrir menú de navegación'>
@@ -59,7 +61,10 @@ const Header = ({ carritoItems, eliminarProducto }) => {
           </ul>
         </nav>
       </div>
+      
     </header>
+    
+
   )
 }
 

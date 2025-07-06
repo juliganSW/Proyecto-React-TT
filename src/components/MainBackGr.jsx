@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const mainBackground = () => {
     return (
-        <div className="contenedor">
+        <div className="contenedor" >
             <div className="contenedorImg">
                 <img src={reloj_nomad40} alt="imagen reloj" />
             </div>

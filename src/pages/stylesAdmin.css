@@ -82,7 +82,14 @@
 /*botones de los formularios de edicion y adición de productos*/
 .container-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width:768px){
+  .container-buttons{
+    justify-content: space-evenly;
+    gap: 10px;
+  }
 }
 
 .admin-editButton,
@@ -112,10 +119,15 @@
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-
-  
 }
 
+@media only screen and (max-width:768px){
+  .admin-add-button{
+     padding: 0.75rem 0.85rem;
+}
+
+} 
+  
 .admin-nav-button:hover,
 .admin-deleteButton:hover {
   box-shadow: 0 0 0px 1px #ec5353,
@@ -165,22 +177,27 @@
   border-radius: 4px;
   border: 1px solid #39f2ae;
 }
-
 .form-error {
   color: red;
   font-size: 14px;
 }
+
 /*boton agregar producto*/
  .add-adminBtn{
-  color: #39f2aed3;
-  font-size: 3.5rem;
+  color: #b1b5c0;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 25px;
   z-index: 1000;
 }
+
+.add-adminBtn:hover{
+  color: #39f2aed3;
+}
+
 .tooltip {
  display: inline-block;
+
 }
 .tooltip-text {
   visibility: hidden;
@@ -195,6 +212,7 @@
   opacity: 0;
   transition: opacity 0.3s;
   white-space: nowrap;
+  box-shadow: 0px 3px 6px #39f2ae;
 }
 
 .tooltip:hover .tooltip-text {
@@ -219,4 +237,3 @@
     transform: scale(1);
   }
 }
-/*media queries para pantallas pequeñas*/

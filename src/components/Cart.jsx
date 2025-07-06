@@ -24,7 +24,7 @@ const Cart = ({ isOpen, onClose }) => {
                   <li key={index} style={{ color: '#39f2ae' }}>
                     {item.modelo} - ${item.precio} - {item.cantidad}
                     <button aria-label='Eliminar del carrito' onClick={() => handleDeleteFromCart(item)}>
-                      <i className="fa-solid fa-trash"></i>
+                      <i className="fa-solid fa-trash" style={{"color":"red"}}></i>
                     </button>
                   </li>
                 ))}

@@ -3,13 +3,14 @@
  display: flex;
  justify-content: center;
  align-items: center;
- margin: 60px auto;
+ margin: 90px auto 10px;
  padding: 40px;
  border-radius: 20px;
  width:380px;
  background-color: #16161695;
- box-shadow: 0px 15px 40px #39f2ae;
+ box-shadow: 0px 15px 30px #39f2ae;
 }
+
 .backToHome {
   display: flex;
   justify-content: center;
@@ -97,7 +98,6 @@
 /*media queries para dispositivos medianos*/
 @media screen and (max-width: 768px) {
   .login-container {
-    width: 60%;
     padding: 30px;
     margin: 40px auto;
   }
@@ -128,7 +128,7 @@
   .login-container {
     width: 80%;
     padding: 25px;
-    margin: 30px auto;
+    margin: 120px auto 20px;
   }
 
   .form input[type="email"],

@@ -16,7 +16,9 @@ import { CartContext } from './context/CartContext'
 import { useAuth } from './context/AuthContext';
 
 
+
 function App() {
+  
   const { cart, productos, cargando, destacados, error, handleAddToCart, handleDeleteFromCart } = useContext(CartContext)
 
   const { isAuthenticated } = useAuth();

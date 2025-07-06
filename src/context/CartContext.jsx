@@ -47,7 +47,7 @@ export const CartProvider = ({ children }) => {
       })
   }, [])
   useEffect(() => {
-    fetch('/data/data3.json')
+    fetch('/data/data3.json') 
       .then(response => response.json())
       .then(datos => {
         setTimeout(() => {

@@ -10,6 +10,7 @@ import Categorias from '../components/Categorias'
 import { Helmet } from 'react-helmet-async'
 
 const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) => {
+  
   return (
     <>
       <Helmet>
@@ -23,6 +24,7 @@ const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) 
 
       <Header agregarCarrito={agregarCarrito} eliminarProducto={eliminarProducto} carritoItems={cart} />
       <main>
+         
         <MainBackGr />
         <h1 className='headline'> Modelos más populares</h1>
 
@@ -35,6 +37,7 @@ const Home = ({ cart, destacados, cargando, agregarCarrito, eliminarProducto }) 
         <h1 className="headline">Tenemos las mejores marcas</h1>
         <Marcas />
         <Servicios />
+         
       </main>
       <Footer />
     </>
