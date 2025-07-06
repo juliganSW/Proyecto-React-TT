@@ -45,7 +45,7 @@ export const AdminProvider = ({ children }) => {
             }
             const data = await respuesta.json()
             alertaSuccess('Producto agregado exitosamente');
-
+            setOpen(false); 
             cargarProducto()
 
         } catch (error) {
